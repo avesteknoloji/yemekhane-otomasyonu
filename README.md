@@ -1,1 +1,2 @@
-# yemekhane-otomasyonu
+# Yemekhane Otomasyonu
+Bir okulun isteği üzerine hazırlamış olduğumuz otomasyon uygulamasıdır...
