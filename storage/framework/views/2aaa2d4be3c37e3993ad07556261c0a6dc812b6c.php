@@ -1,23 +1,24 @@
-@extends('layouts.admin.master')
 
-@section('title')Yemekler
- {{ $title }}
-@endsection
 
-@push('css')
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/select2.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/owlcarousel.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/range-slider.css')}}">
-@endpush
+<?php $__env->startSection('title'); ?>Yemekler
+ <?php echo e($title); ?>
 
-@section('content')
-	@component('components.breadcrumb')
-		@slot('breadcrumb_title')
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startPush('css'); ?>
+<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/select2.css')); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/owlcarousel.css')); ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo e(asset('assets/css/range-slider.css')); ?>">
+<?php $__env->stopPush(); ?>
+
+<?php $__env->startSection('content'); ?>
+	<?php $__env->startComponent('components.breadcrumb'); ?>
+		<?php $__env->slot('breadcrumb_title'); ?>
 			<h3>Yemekler</h3>
-		@endslot
+		<?php $__env->endSlot(); ?>
 		<li class="breadcrumb-item">ECommerce</li>
 		<li class="breadcrumb-item active">Yemekler</li>
-	@endcomponent
+	<?php echo $__env->renderComponent(); ?>
 	
 	<div class="container-fluid product-wrapper">
 	    <div class="product-grid">
@@ -132,7 +133,7 @@
 	                                                    <div class="item">
 	                                                        <div class="product-box">
 	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                                                <div class="media-body">
 	                                                                    <div class="product-details">
 	                                                                        <div>
@@ -152,7 +153,7 @@
 	                                                        </div>
 	                                                        <div class="product-box">
 	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                                                <div class="media-body">
 	                                                                    <div class="product-details">
 	                                                                        <div>
@@ -172,7 +173,7 @@
 	                                                        </div>
 	                                                        <div class="product-box">
 	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                                                <div class="media-body">
 	                                                                    <div class="product-details">
 	                                                                        <div>
@@ -194,7 +195,7 @@
 	                                                    <div class="item">
 	                                                        <div class="product-box">
 	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                                                <div class="media-body">
 	                                                                    <div class="product-details">
 	                                                                        <div>
@@ -214,7 +215,7 @@
 	                                                        </div>
 	                                                        <div class="product-box">
 	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                                                <div class="media-body">
 	                                                                    <div class="product-details">
 	                                                                        <div>
@@ -234,7 +235,7 @@
 	                                                        </div>
 	                                                        <div class="product-box">
 	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                                                <div class="media-body">
 	                                                                    <div class="product-details">
 	                                                                        <div>
@@ -255,7 +256,7 @@
 	                                                    </div>
 	                                                </div>
 	                                            </div>
-	                                            <div class="product-filter text-center"><img class="img-fluid banner-product" src="{{asset('assets/images/ecommerce/banner.jpg')}}" alt="" data-original-title="" title="" /></div>
+	                                            <div class="product-filter text-center"><img class="img-fluid banner-product" src="<?php echo e(asset('assets/images/ecommerce/banner.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                        </div>
 	                                    </div>
 	                                </div>
@@ -277,7 +278,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -294,7 +295,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Man's Jacket</h4></a>
 	                                                    <div class="product-price">
@@ -349,8 +350,8 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <div class="ribbon ribbon-danger">Sale</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" />
+	                               
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -367,7 +368,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>fido dido</h4></a>
 	                                                    <div class="product-price">
@@ -422,7 +423,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -439,7 +440,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Wonder Woman</h4></a>
 	                                                    <div class="product-price">
@@ -495,7 +496,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-success ribbon-right">50%</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -512,7 +513,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Roadster</h4></a>
 	                                                    <div class="product-price">
@@ -568,7 +569,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-success ribbon-right">50%</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -585,7 +586,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Roadster</h4></a>
 	                                                    <div class="product-price">
@@ -640,7 +641,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -657,7 +658,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Man's Jacket</h4></a>
 	                                                    <div class="product-price">
@@ -713,7 +714,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-danger">Sale</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -730,7 +731,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>fido dido</h4></a>
 	                                                    <div class="product-price">
@@ -785,7 +786,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -802,7 +803,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Wonder Woman</h4></a>
 	                                                    <div class="product-price">
@@ -857,7 +858,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -874,7 +875,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Wonder Woman</h4></a>
 	                                                    <div class="product-price">
@@ -930,7 +931,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-success ribbon-right">50%</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -947,7 +948,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Roadster</h4></a>
 	                                                    <div class="product-price">
@@ -1002,7 +1003,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -1019,7 +1020,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Man's Jacket</h4></a>
 	                                                    <div class="product-price">
@@ -1075,7 +1076,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-danger">Sale</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -1092,7 +1093,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>fido dido</h4></a>
 	                                                    <div class="product-price">
@@ -1148,7 +1149,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-danger">Sale</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -1165,7 +1166,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/02.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>fido dido</h4></a>
 	                                                    <div class="product-price">
@@ -1220,7 +1221,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -1237,7 +1238,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/03.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Wonder Woman</h4></a>
 	                                                    <div class="product-price">
@@ -1293,7 +1294,7 @@
 	                        <div class="product-box">
 	                            <div class="product-img">
 	                                <div class="ribbon ribbon-success ribbon-right">50%</div>
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -1310,7 +1311,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/04.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/04.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Roadster</h4></a>
 	                                                    <div class="product-price">
@@ -1365,7 +1366,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
@@ -1382,7 +1383,7 @@
 	                                    <div class="modal-content">
 	                                        <div class="modal-header">
 	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="{{asset('assets/images/ecommerce/01.jpg')}}" alt="" /></div>
+	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" /></div>
 	                                                <div class="product-details col-lg-6 text-start">
 	                                                    <a href="product-page"> <h4>Man's Jacket</h4></a>
 	                                                    <div class="product-price">
@@ -1439,17 +1440,18 @@
 	</div>
 
 	
-	@push('scripts')
-	<script src="{{asset('assets/js/range-slider/ion.rangeSlider.min.js')}}"></script>
-    <script src="{{asset('assets/js/range-slider/rangeslider-script.js')}}"></script>
-    <script src="{{asset('assets/js/touchspin/vendors.min.js')}}"></script>
-    <script src="{{asset('assets/js/touchspin/touchspin.js')}}"></script>
-    <script src="{{asset('assets/js/touchspin/input-groups.min.js')}}"></script>
-    <script src="{{asset('assets/js/owlcarousel/owl.carousel.js')}}"></script>
-    <script src="{{asset('assets/js/select2/select2.full.min.js')}}"></script>
-    <script src="{{asset('assets/js/select2/select2-custom.js')}}"></script>
-    <script src="{{asset('assets/js/tooltip-init.js')}}"></script>
-    <script src="{{asset('assets/js/product-tab.js')}}"></script>
-	@endpush
+	<?php $__env->startPush('scripts'); ?>
+	<script src="<?php echo e(asset('assets/js/range-slider/ion.rangeSlider.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/range-slider/rangeslider-script.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/touchspin/vendors.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/touchspin/touchspin.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/touchspin/input-groups.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/owlcarousel/owl.carousel.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/select2/select2.full.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/select2/select2-custom.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/tooltip-init.js')); ?>"></script>
+    <script src="<?php echo e(asset('assets/js/product-tab.js')); ?>"></script>
+	<?php $__env->stopPush(); ?>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/ecommerce/product.blade.php ENDPATH**/ ?>
