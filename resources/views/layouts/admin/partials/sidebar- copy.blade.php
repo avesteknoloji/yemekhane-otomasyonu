@@ -29,18 +29,6 @@
                     </li>
                     <li class="sidebar-main-title">
                         <div>
-                            <h6>Kullanıcı İşlemleri</h6>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/dashboard') }}" href="javascript:void(0)"><i data-feather="users"></i><span>Ekleme İşlemleri</span></a>                  
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/dashboard') }};">
-                            <li><a href="{{route('index')}}" class="{{routeActive('index')}}">Kullanıcı Grubu Ekleme</a></li>
-                            <li><a href="{{route('dashboard-02')}}" class="{{routeActive('dashboard-02')}}">Kulanıcı Ekleme</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-main-title">
-                        <div>
                             <h6>General</h6>
                         </div>
                     </li>
