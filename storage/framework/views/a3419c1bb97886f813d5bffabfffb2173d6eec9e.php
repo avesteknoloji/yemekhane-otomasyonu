@@ -273,7 +273,7 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('/ecommerce')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Ecommerce</span></a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/ecommerce')); ?>;">
-                            <li><a href="<?php echo e(route('product')); ?>" class="<?php echo e(routeActive('product')); ?>">Product</a></li>
+                            <li><a href="<?php echo e(route('yemek')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
                             <li><a href="<?php echo e(route('product-page')); ?>" class="<?php echo e(routeActive('product-page')); ?>">Product page</a></li>
                             <li><a href="<?php echo e(route('list-products')); ?>" class="<?php echo e(routeActive('list-products')); ?>">Product list</a></li>
                             <li><a href="<?php echo e(route('payment-details')); ?>" class="<?php echo e(routeActive('payment-details')); ?>">Payment Details</a></li>

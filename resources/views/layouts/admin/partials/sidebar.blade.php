@@ -273,7 +273,7 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('/ecommerce') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Ecommerce</span></a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/ecommerce') }};">
-                            <li><a href="{{ route('product') }}" class="{{routeActive('product')}}">Product</a></li>
+                            <li><a href="{{ route('yemek') }}" class="{{routeActive('product')}}">Yemekler</a></li>
                             <li><a href="{{ route('product-page') }}" class="{{routeActive('product-page')}}">Product page</a></li>
                             <li><a href="{{ route('list-products') }}" class="{{routeActive('list-products')}}">Product list</a></li>
                             <li><a href="{{ route('payment-details') }}" class="{{routeActive('payment-details')}}">Payment Details</a></li>
