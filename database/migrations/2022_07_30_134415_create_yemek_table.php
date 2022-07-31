@@ -28,7 +28,7 @@ class CreateYemekTable extends Migration
             ->onDelete('cascade');
             
 
-
+            $table->softDeletes();  
             $table->timestamps();
         });
     }

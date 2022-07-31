@@ -18,7 +18,7 @@ class CreateYemekKategoriTable extends Migration
             $table->string('yemek_kategori_ad',150);
             $table->unsignedSmallInteger('yemek_kategori_ust');
             $table->unsignedSmallInteger('yemek_kategori_sira');
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }
