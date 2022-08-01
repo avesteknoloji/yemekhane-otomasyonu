@@ -24,6 +24,7 @@ Route::view('sample-page', 'admin.pages.sample-page')->name('sample-page');
 Route::prefix('dashboard')->group(function () {
     Route::view('/', 'admin.dashboard.default')->name('index');
     Route::view('default', 'admin.dashboard.default')->name('dashboard.index');
+    
 });
 
 Route::view('default-layout', 'multiple.default-layout')->name('default-layout');

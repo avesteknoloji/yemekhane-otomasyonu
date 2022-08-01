@@ -201,6 +201,13 @@ Route::prefix('users')->group( function(){
 	Route::view('user-profile', 'admin.apps.user-profile')->name('user-profile');
 	Route::view('edit-profile', 'admin.apps.edit-profile')->name('edit-profile');
 	Route::view('user-cards', 'admin.apps.user-cards')->name('user-cards');
+
+});
+
+Route::prefix('kullanici')->group( function(){
+	Route::view('kullanici-ekle', 'admin.forms.user-add')->name('kullanici-ekle');
+	Route::view('kullanici-grup-ekle', 'admin.forms.user-group-add')->name('kullanici-grup-ekle');
+	
 });
 
 Route::view('bookmark', 'admin.apps.bookmark')->name('bookmark');

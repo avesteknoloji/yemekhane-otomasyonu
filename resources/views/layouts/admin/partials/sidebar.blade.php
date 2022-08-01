@@ -33,10 +33,10 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/dashboard') }}" href="javascript:void(0)"><i data-feather="users"></i><span>Ekleme İşlemleri</span></a>                  
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/dashboard') }};">
-                            <li><a href="{{route('index')}}" class="{{routeActive('index')}}">Kullanıcı Grubu Ekleme</a></li>
-                            <li><a href="{{route('dashboard-02')}}" class="{{routeActive('dashboard-02')}}">Kulanıcı Ekleme</a></li>
+                        <a class="nav-link menu-title {{ prefixActive('/kullanici') }}" href="javascript:void(0)"><i data-feather="users"></i><span>Ekleme İşlemleri</span></a>                  
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/kullanici') }};">
+                            <li><a href="{{route('kullanici-grup-ekle')}}" class="{{routeActive('kullanici-grup-ekle')}}">Kullanıcı Grubu Ekleme</a></li>
+                            <li><a href="{{route('kullanici-ekle')}}" class="{{routeActive('kullanici-ekle')}}">Kulanıcı Ekleme</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-main-title">
