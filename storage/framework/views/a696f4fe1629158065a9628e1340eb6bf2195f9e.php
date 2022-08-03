@@ -35,8 +35,8 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('/kullanici')); ?>" href="javascript:void(0)"><i data-feather="users"></i><span>Ekleme İşlemleri</span></a>                  
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/kullanici')); ?>;">
-                            <li><a href="<?php echo e(route('kullanici-grup-ekle')); ?>" class="<?php echo e(routeActive('kullanici-grup-ekle')); ?>">Kullanıcı Grubu Ekleme</a></li>
-                            <li><a href="<?php echo e(route('kullanici-ekle')); ?>" class="<?php echo e(routeActive('kullanici-ekle')); ?>">Kulanıcı Ekleme</a></li>
+                            <li><a href="<?php echo e(route('group-add')); ?>" class="<?php echo e(routeActive('group-add')); ?>">Kullanıcı Grubu Ekleme</a></li>
+                            <li><a href="<?php echo e(route('user-add')); ?>" class="<?php echo e(routeActive('user-add')); ?>">Kulanıcı Ekleme</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-main-title">

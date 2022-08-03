@@ -26,8 +26,13 @@
 							<div class="card-header pb-0">
 								<h5>Kullanıcı Grubu Tanımlama</h5>
 							</div>
+							@if ($message=session('message'))
+							<div class="alert alert-warning">{{$message}}</div>
+							@endif
+							
 							<div class="card-body">
-								<form class="theme-form" action="islem.php" method="POST">
+								<form class="theme-form" action="{{route('user-group-registration')}}" method="POST">
+									{{ csrf_field() }}
 									<div class="mb-3">
 										<label class="col-form-label pt-0" for="kullaniciGrupKodu">Grup Kodu*</label>
 										<input class="form-control" id="kullaniciGrupKodu" type="text" required maxlength="6" name="kullaniciGrupKodu" aria-describedby="kullaniciGrupKodu" placeholder="Grup Kodunu Giriniz" />

@@ -204,11 +204,6 @@ Route::prefix('users')->group( function(){
 
 });
 
-Route::prefix('kullanici')->group( function(){
-	Route::view('kullanici-ekle', 'admin.forms.user-add')->name('kullanici-ekle');
-	Route::view('kullanici-grup-ekle', 'admin.forms.user-group-add')->name('kullanici-grup-ekle');
-	
-});
 
 Route::view('bookmark', 'admin.apps.bookmark')->name('bookmark');
 Route::view('contacts', 'admin.apps.contacts')->name('contacts');

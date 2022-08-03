@@ -35,8 +35,8 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('/kullanici') }}" href="javascript:void(0)"><i data-feather="users"></i><span>Ekleme İşlemleri</span></a>                  
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/kullanici') }};">
-                            <li><a href="{{route('kullanici-grup-ekle')}}" class="{{routeActive('kullanici-grup-ekle')}}">Kullanıcı Grubu Ekleme</a></li>
-                            <li><a href="{{route('kullanici-ekle')}}" class="{{routeActive('kullanici-ekle')}}">Kulanıcı Ekleme</a></li>
+                            <li><a href="{{route('group-add')}}" class="{{routeActive('group-add')}}">Kullanıcı Grubu Ekleme</a></li>
+                            <li><a href="{{route('user-add')}}" class="{{routeActive('user-add')}}">Kulanıcı Ekleme</a></li>
                         </ul>
                     </li>
                     <li class="sidebar-main-title">
