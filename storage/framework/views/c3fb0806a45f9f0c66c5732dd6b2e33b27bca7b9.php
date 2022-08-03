@@ -45,16 +45,18 @@
 										<input class="form-control" type="email" placeholder="Kullanıcı şifresini tekrar giriniz" />
 									</div>
 									<div class="mb-3">
-										<label class="col-form-label">İletişim No:</label>
-										<input class="form-control" type="Number" placeholder="İletişim Numarası Giriniz..." />
+										<label class="col-form-label">Kullanıcı Grubu:</label>
+										<select class="form-control" name="kullaniciGrupId" id="kullaniciGrupId"><option>Kullanıcı Grubu Seçiniz
+										</option></select>
 									</div>
-								</form>
+								
 								
 							</div>
 							<div class="card-footer">
-								<button class="btn btn-primary">Submit</button>
-								<button class="btn btn-secondary">Cancel</button>
+								<button class="btn btn-primary">Kaydet</button>
+								<button class="btn btn-secondary">İptal</button>
 							</div>
+						</form>
 						</div>
 					</div>
 				</div>
