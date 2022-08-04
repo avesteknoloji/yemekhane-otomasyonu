@@ -176,8 +176,10 @@ Route::view('file-manager', 'admin.apps.file-manager')->name('file-manager');
 Route::view('kanban', 'admin.apps.kanban')->name('kanban');
 
 Route::prefix('ecommerce')->group( function(){
-	//Route::view('yemek', 'admin.apps.ecommerce.yemek')->name('yemek');
+	
 	Route::get('yemek',[yemekController::class,'index'])->name('yemek');
+	Route::post('yemek',[yemekController::class,'ara'])->name('yemek_ara');
+	Route::view('test', 'admin.apps.ecommerce.test')->name('test');
 	Route::view('product-page', 'admin.apps.ecommerce.product-page')->name('product-page');
 	Route::view('list-products', 'admin.apps.ecommerce.list-products')->name('list-products');
 	Route::view('payment-details', 'admin.apps.ecommerce.payment-details')->name('payment-details');

@@ -14,4 +14,5 @@
 <!-- Theme js-->
 <script src="<?php echo e(asset('assets/js/script.js')); ?>"></script>
 <script src="<?php echo e(asset('assets/js/theme-customizer/customizer.js')); ?>"></script>
-<!-- Plugin used--><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/layouts/admin/partials/js.blade.php ENDPATH**/ ?>
+<!-- Plugin used-->
+<?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/layouts/admin/partials/js.blade.php ENDPATH**/ ?>

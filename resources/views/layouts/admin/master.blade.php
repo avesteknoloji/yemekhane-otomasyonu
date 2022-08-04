@@ -58,3 +58,4 @@
     @includeIf('layouts.admin.partials.js')
   </body>
 </html>
+<script src="{{asset('js/app.js')}}"></script>

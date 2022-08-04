@@ -46,6 +46,22 @@
                             <li><a href="<?php echo e(route('chart-widget')); ?>" class="<?php echo e(routeActive('chart-widget')); ?>">Chart</a></li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('/ecommerce')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Menü İşlemleri</span></a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/ecommerce')); ?>;">
+                            <li><a href="<?php echo e(route('yemek')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
+                            <li><a href="<?php echo e(route('test')); ?>" class="<?php echo e(routeActive('product')); ?>">Test Sayfası</a></li>
+                            <li><a href="<?php echo e(route('product-page')); ?>" class="<?php echo e(routeActive('product-page')); ?>">Product page</a></li>
+                            <li><a href="<?php echo e(route('list-products')); ?>" class="<?php echo e(routeActive('list-products')); ?>">Product list</a></li>
+                            <li><a href="<?php echo e(route('payment-details')); ?>" class="<?php echo e(routeActive('payment-details')); ?>">Payment Details</a></li>
+                            <li><a href="<?php echo e(route('order-history')); ?>" class="<?php echo e(routeActive('order-history')); ?>">Order History</a></li>
+                            <li><a href="<?php echo e(route('invoice-template')); ?>" class="<?php echo e(routeActive('invoice-template')); ?>">Invoice</a></li>
+                            <li><a href="<?php echo e(route('cart')); ?>" class="<?php echo e(routeActive('cart')); ?>">Cart</a></li>
+                            <li><a href="<?php echo e(route('list-wish')); ?>" class="<?php echo e(routeActive('list-wish')); ?>">Wishlist</a></li>
+                            <li><a href="<?php echo e(route('checkout')); ?>" class="<?php echo e(routeActive('checkout')); ?>">Checkout</a></li>
+                            <li><a href="<?php echo e(route('pricing')); ?>" class="<?php echo e(routeActive('pricing')); ?>">Pricing</a></li>
+                        </ul>
+                    </li>
                     <li class="sidebar-main-title">
                         <div>
                             <h6>Components</h6>
@@ -257,6 +273,7 @@
                             <h6>Applications</h6>
                         </div>
                     </li>
+                   
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('/project')); ?>" href="javascript:void(0)"><i data-feather="box"></i><span>Project </span></a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/project')); ?>;">
@@ -270,21 +287,7 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title link-nav <?php echo e(routeActive('kanban')); ?>" href="<?php echo e(route('kanban')); ?>"><i data-feather="monitor"></i><span>Kanban Board</span></a>
                     </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title <?php echo e(prefixActive('/ecommerce')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Ecommerce</span></a>
-                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/ecommerce')); ?>;">
-                            <li><a href="<?php echo e(route('yemek')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
-                            <li><a href="<?php echo e(route('product-page')); ?>" class="<?php echo e(routeActive('product-page')); ?>">Product page</a></li>
-                            <li><a href="<?php echo e(route('list-products')); ?>" class="<?php echo e(routeActive('list-products')); ?>">Product list</a></li>
-                            <li><a href="<?php echo e(route('payment-details')); ?>" class="<?php echo e(routeActive('payment-details')); ?>">Payment Details</a></li>
-                            <li><a href="<?php echo e(route('order-history')); ?>" class="<?php echo e(routeActive('order-history')); ?>">Order History</a></li>
-                            <li><a href="<?php echo e(route('invoice-template')); ?>" class="<?php echo e(routeActive('invoice-template')); ?>">Invoice</a></li>
-                            <li><a href="<?php echo e(route('cart')); ?>" class="<?php echo e(routeActive('cart')); ?>">Cart</a></li>
-                            <li><a href="<?php echo e(route('list-wish')); ?>" class="<?php echo e(routeActive('list-wish')); ?>">Wishlist</a></li>
-                            <li><a href="<?php echo e(route('checkout')); ?>" class="<?php echo e(routeActive('checkout')); ?>">Checkout</a></li>
-                            <li><a href="<?php echo e(route('pricing')); ?>" class="<?php echo e(routeActive('pricing')); ?>">Pricing</a></li>
-                        </ul>
-                    </li>
+                   
                     <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('/email')); ?>" href="javascript:void(0)"><i data-feather="mail"></i><span>Email</span></a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/email')); ?>;">

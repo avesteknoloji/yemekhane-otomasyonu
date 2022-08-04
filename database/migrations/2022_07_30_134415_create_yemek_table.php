@@ -24,7 +24,7 @@ class CreateYemekTable extends Migration
 
             $table->foreign('yemek_kategori_id')
             ->references('id')
-            ->on('yemek')
+            ->on('yemek_kategori')
             ->onDelete('cascade');
             
 

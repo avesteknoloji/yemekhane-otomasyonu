@@ -46,6 +46,22 @@
                             <li><a href="{{ route('chart-widget') }}" class="{{routeActive('chart-widget')}}">Chart</a></li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('/ecommerce') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Menü İşlemleri</span></a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/ecommerce') }};">
+                            <li><a href="{{ route('yemek') }}" class="{{routeActive('product')}}">Yemekler</a></li>
+                            <li><a href="{{ route('test') }}" class="{{routeActive('product')}}">Test Sayfası</a></li>
+                            <li><a href="{{ route('product-page') }}" class="{{routeActive('product-page')}}">Product page</a></li>
+                            <li><a href="{{ route('list-products') }}" class="{{routeActive('list-products')}}">Product list</a></li>
+                            <li><a href="{{ route('payment-details') }}" class="{{routeActive('payment-details')}}">Payment Details</a></li>
+                            <li><a href="{{ route('order-history') }}" class="{{routeActive('order-history')}}">Order History</a></li>
+                            <li><a href="{{ route('invoice-template') }}" class="{{routeActive('invoice-template')}}">Invoice</a></li>
+                            <li><a href="{{ route('cart') }}" class="{{routeActive('cart')}}">Cart</a></li>
+                            <li><a href="{{ route('list-wish') }}" class="{{routeActive('list-wish')}}">Wishlist</a></li>
+                            <li><a href="{{ route('checkout') }}" class="{{routeActive('checkout')}}">Checkout</a></li>
+                            <li><a href="{{ route('pricing') }}" class="{{routeActive('pricing')}}">Pricing</a></li>
+                        </ul>
+                    </li>
                     <li class="sidebar-main-title">
                         <div>
                             <h6>Components</h6>
@@ -257,6 +273,7 @@
                             <h6>Applications</h6>
                         </div>
                     </li>
+                   
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('/project') }}" href="javascript:void(0)"><i data-feather="box"></i><span>Project </span></a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/project') }};">
@@ -270,21 +287,7 @@
                     <li class="dropdown">
                         <a class="nav-link menu-title link-nav {{routeActive('kanban')}}" href="{{ route('kanban') }}"><i data-feather="monitor"></i><span>Kanban Board</span></a>
                     </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/ecommerce') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Ecommerce</span></a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/ecommerce') }};">
-                            <li><a href="{{ route('yemek') }}" class="{{routeActive('product')}}">Yemekler</a></li>
-                            <li><a href="{{ route('product-page') }}" class="{{routeActive('product-page')}}">Product page</a></li>
-                            <li><a href="{{ route('list-products') }}" class="{{routeActive('list-products')}}">Product list</a></li>
-                            <li><a href="{{ route('payment-details') }}" class="{{routeActive('payment-details')}}">Payment Details</a></li>
-                            <li><a href="{{ route('order-history') }}" class="{{routeActive('order-history')}}">Order History</a></li>
-                            <li><a href="{{ route('invoice-template') }}" class="{{routeActive('invoice-template')}}">Invoice</a></li>
-                            <li><a href="{{ route('cart') }}" class="{{routeActive('cart')}}">Cart</a></li>
-                            <li><a href="{{ route('list-wish') }}" class="{{routeActive('list-wish')}}">Wishlist</a></li>
-                            <li><a href="{{ route('checkout') }}" class="{{routeActive('checkout')}}">Checkout</a></li>
-                            <li><a href="{{ route('pricing') }}" class="{{routeActive('pricing')}}">Pricing</a></li>
-                        </ul>
-                    </li>
+                   
                     <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('/email') }}" href="javascript:void(0)"><i data-feather="mail"></i><span>Email</span></a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/email') }};">
