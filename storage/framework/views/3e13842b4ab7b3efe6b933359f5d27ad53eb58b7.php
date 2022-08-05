@@ -15,53 +15,26 @@
             <div class="col-12">
                 <div class="login-card">
                     <form class="theme-form login-form">
-                        <h4>Login</h4>
-                        <h6>Welcome back! Log in to your account.</h6>
+                        <h4>Yemekhane Yönetim Sistemi</h4>
                         <div class="form-group">
-                            <label>Email Address</label>
+                            <label>Eposta</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="icon-email"></i></span>
-                                <input class="form-control" type="email" required="" placeholder="Test@gmail.com" />
+                                <input class="form-control" type="email" required=""  name="userEmail" placeholder="Test@gmail.com" />
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>Şifre</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="icon-lock"></i></span>
-                                <input class="form-control" type="password" name="login[password]" required="" placeholder="*********" />
-                                <div class="show-hide"><span class="show"> </span></div>
+                                <input class="form-control" type="password" name="userPass" required="" placeholder="*********" />
                             </div>
                         </div>
+                        
                         <div class="form-group">
-                            <div class="checkbox">
-                                <input id="checkbox1" type="checkbox" />
-                                <label for="checkbox1">Remember password</label>
-                            </div>
-                            <a class="link" href="<?php echo e(route('forget-password')); ?>">Forgot password?</a>
+                            <button class="btn btn-primary btn-block" type="submit">Giriş Yap</button>
                         </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-block" type="submit">Sign in</button>
-                        </div>
-                        <div class="login-social-title">
-                            <h5>Sign in with</h5>
-                        </div>
-                        <div class="form-group">
-                            <ul class="login-social">
-                                <li>
-                                    <a href="https://www.linkedin.com/login" target="_blank"><i data-feather="linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/login" target="_blank"><i data-feather="twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/login" target="_blank"><i data-feather="facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/login" target="_blank"><i data-feather="instagram"> </i></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <p>Don't have account?<a class="ms-2" href="<?php echo e(route('sign-up')); ?>">Create Account</a></p>
+                       
                     </form>
                 </div>
             </div>
