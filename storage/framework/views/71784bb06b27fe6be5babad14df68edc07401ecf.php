@@ -26,7 +26,7 @@
 								<h5>Kullanıcı Grubu Tanımlama</h5>
 							</div>
 							<?php if($message=session('message')): ?>
-							<div class="alert alert-warning"><?php echo e($message); ?></div>
+							<div class="alert alert-success"><?php echo e($message); ?></div>
 							<?php endif; ?>
 							
 							<div class="card-body">

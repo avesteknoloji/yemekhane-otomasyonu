@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class UsersController extends Controller
 {
+    public function loginPage(){
+
+        return view('admin.authentication.login');
+
+    }
+    
     public function group_add(){
 
         return view('admin.forms.user-group-add');
