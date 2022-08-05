@@ -27,7 +27,7 @@
 								<h5>Kullanıcı Grubu Tanımlama</h5>
 							</div>
 							@if ($message=session('message'))
-							<div class="alert alert-warning">{{$message}}</div>
+							<div class="alert alert-success">{{$message}}</div>
 							@endif
 							
 							<div class="card-body">
