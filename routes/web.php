@@ -38,4 +38,5 @@ Route::get('kullanici-grup-ekle', 'App\Http\Controllers\UsersController@group_ad
 Route::get('kullanici-ekle', 'App\Http\Controllers\UsersController@user_add')->name('user-add');
 Route::post('kullanici-grup-kaydet', 'App\Http\Controllers\UsersController@user_group_registration')->name('user-group-registration');
 
+Route::post('kullanici-kaydet', 'App\Http\Controllers\UsersController@user_registration')->name('user-registration');
 	

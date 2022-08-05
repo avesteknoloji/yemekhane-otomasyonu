@@ -18,17 +18,14 @@ class CreateUsersTable extends Migration
             $table->string('user_name',50);
             $table->string('user_pass',50);
             $table->string('user_email',50);
-            $table->string('user_role_id');
+            $table->string('user_role_id')->references('user_role_id')
+            ->on('users_role')
+            ->onDelete('cascade');;
             $table->softDeletes();  
             $table->timestamps();
         });
 
-        Schema::table('users', function($table) {
-            $table->foreign('user_role_id')
-            ->references('user_role_id')
-            ->on('users_role')
-            ->onDelete('cascade');
-        });
+        
     }
 
     /**

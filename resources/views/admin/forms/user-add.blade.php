@@ -27,28 +27,36 @@
 								<h5>Kullanıcı Ekleme Formu</h5>
 							</div>
 							<div class="card-body">
-								<form class="theme-form mega-form">
+								@if ($message=session('message'))
+							<div class="alert alert-success">{{$message}}</div>
+							@endif
+								<form class="theme-form mega-form" action="{{route('user-registration')}}" method="POST">
+									{{ csrf_field() }}
 									<h6>Kullanıcı Bilgileri</h6>
 									<div class="mb-3">
 										<label class="col-form-label">Kullanıcı Adı</label>
-										<input class="form-control" type="text" placeholder="Kullanıcı Adı Giriniz" />
+										<input class="form-control" type="text" name="userName" placeholder="Kullanıcı Adı Giriniz" />
 									</div>
 									<div class="mb-3">
 										<label class="col-form-label">Eposta Adresi</label>
-										<input class="form-control" type="email" placeholder="Eposta Adresi Giriniz" />
+										<input class="form-control" type="email" name="userEmail" placeholder="Eposta Adresi Giriniz" />
 									</div>
 									<div class="mb-3">
 										<label class="col-form-label">Şifre</label>
-										<input class="form-control" type="email" placeholder="Kullanıcı şifresini giriniz" />
+										<input class="form-control" type="password" name="userPass" placeholder="Kullanıcı şifresini giriniz" />
 									</div>
 									<div class="mb-3">
 										<label class="col-form-label">Şifre Tekrar</label>
-										<input class="form-control" type="email" placeholder="Kullanıcı şifresini tekrar giriniz" />
+										<input class="form-control" type="password" name="userPass2" placeholder="Kullanıcı şifresini tekrar giriniz" />
 									</div>
 									<div class="mb-3">
 										<label class="col-form-label">Kullanıcı Grubu:</label>
-										<select class="form-control" name="kullaniciGrupId" id="kullaniciGrupId"><option>Kullanıcı Grubu Seçiniz
-										</option></select>
+										<select class="form-control" name="userGroupId" id="userGroupId">
+											@foreach ($userGroups as $user_role_id=>$user_role_name)
+											<option value="{{$user_role_id}}">{{$user_role_name}}
+											</option>	
+											@endforeach
+											</select>
 									</div>
 								
 								
