@@ -14,13 +14,15 @@
         <div class="row">
             <div class="col-12">
                 <div class="login-card">
-                    <form class="theme-form login-form">
+                    <form class="theme-form login-form" action="<?php echo e(route('login-page')); ?>" method="POST">
+                        <?php echo e(csrf_field()); ?>
+
                         <h4>Yemekhane Yönetim Sistemi</h4>
                         <div class="form-group">
                             <label>Eposta</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="icon-email"></i></span>
-                                <input class="form-control" type="email" required=""  name="userEmail" placeholder="Test@gmail.com" />
+                                <input class="form-control" type="email" name="userEmail"required=""  name="userEmail" placeholder="Test@gmail.com" />
                             </div>
                         </div>
                         <div class="form-group">
