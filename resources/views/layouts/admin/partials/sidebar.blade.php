@@ -59,7 +59,15 @@
                             <li><a href="{{ route('cart') }}" class="{{routeActive('cart')}}">Cart</a></li>
                             <li><a href="{{ route('list-wish') }}" class="{{routeActive('list-wish')}}">Wishlist</a></li>
                             <li><a href="{{ route('checkout') }}" class="{{routeActive('checkout')}}">Checkout</a></li>
-                            <li><a href="{{ route('pricing') }}" class="{{routeActive('pricing')}}">Pricing</a></li>
+                            <li><a href="{{ route('pricingxx') }}" class="{{routeActive('pricing')}}">Pricing</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('/kategori') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Kategori İşlemleri</span></a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/kategori') }};">
+                           <li><a href="{{ route('kategori') }}" class="{{routeActive('product')}}">Kategoriler</a></li>
+                          
+                           
                         </ul>
                     </li>
                     <li class="sidebar-main-title">

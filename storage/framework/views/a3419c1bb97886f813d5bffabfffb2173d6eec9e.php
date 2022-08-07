@@ -59,7 +59,15 @@
                             <li><a href="<?php echo e(route('cart')); ?>" class="<?php echo e(routeActive('cart')); ?>">Cart</a></li>
                             <li><a href="<?php echo e(route('list-wish')); ?>" class="<?php echo e(routeActive('list-wish')); ?>">Wishlist</a></li>
                             <li><a href="<?php echo e(route('checkout')); ?>" class="<?php echo e(routeActive('checkout')); ?>">Checkout</a></li>
-                            <li><a href="<?php echo e(route('pricing')); ?>" class="<?php echo e(routeActive('pricing')); ?>">Pricing</a></li>
+                            <li><a href="<?php echo e(route('pricingxx')); ?>" class="<?php echo e(routeActive('pricing')); ?>">Pricing</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('/kategori')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Kategori İşlemleri</span></a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/kategori')); ?>;">
+                           <li><a href="<?php echo e(route('kategori')); ?>" class="<?php echo e(routeActive('product')); ?>">Kategoriler</a></li>
+                          
+                           
                         </ul>
                     </li>
                     <li class="sidebar-main-title">

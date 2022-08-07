@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\yemekController;
+use App\Http\Controllers\admin\kategoriController;
 
 
 Route::prefix('admin')->group(function () {
@@ -188,7 +189,21 @@ Route::prefix('ecommerce')->group( function(){
 	Route::view('cart', 'admin.apps.ecommerce.cart')->name('cart');
 	Route::view('list-wish', 'admin.apps.ecommerce.list-wish')->name('list-wish');
 	Route::view('checkout', 'admin.apps.ecommerce.checkout')->name('checkout');
-	Route::view('pricing', 'admin.apps.ecommerce.pricing')->name('pricing');
+	Route::view('pricingxx', 'admin.apps.ecommerce.pricing-view')->name('pricingxx');
+});
+
+Route::group(['prefix' => 'kategori'], function () {
+	Route::get('kategori',[kategoriController::class,'index'])->name('kategori');
+	Route::get('yeni',[kategoriController::class,'form'])->name('yeni');
+	Route::get('duzenle/{id}',[kategoriController::class,'form'])->name('duzenle');
+	Route::post('kaydet/{id?}',[kategoriController::class,'kaydet'])->name('kaydet');
+	Route::get('sil/{id}',[kategoriController::class,'sil'])->name('sil');
+	//Route::post('guncelle/{id}',[kategoriController::class,'kaydet'])->name('guncelle');
+	//Route::match(['get', 'post'], '/', 'KategoriController@index')->name('yonetim.kategori');
+	//Route::get('/yeni', 'KategoriController@form')->name('yonetim.kategori.yeni');
+	//Route::get('/duzenle/{id}', 'KategoriController@form')->name('yonetim.kategori.duzenle');
+	//Route::post('/kaydet/{id?}', 'KategoriController@kaydet')->name('yonetim.kategori.kaydet');
+	//Route::get('/sil/{id}', 'KategoriController@sil')->name('yonetim.kategori.sil');
 });
 
 Route::prefix('email')->group( function(){
