@@ -43,33 +43,48 @@
                 @endif
             </div>
             <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Kategoriler</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($list as $item)
-                        <tr>
-                            <th scope="row">{{$item->id}}</th>
-                            <td>{{$item->yemek_kategori_ad}}</td>
-                            <td>
-                                <a href="{{route('duzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
-                                    <span class="fa fa-pencil"></span>
-                                </a>
-                                <a href="{{route('sil', $item->id)}}" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Sil" onclick="return confirm('Emin misiniz?')">
-                                    <span class="fa fa-trash"></span>
-                                </a>
-                            </td>
-                            
-                        </tr>    
-                        @endforeach
-                                                                       
-                    </tbody>
-                </table>
+                
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sıra</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Kategoriler</th>
+                                <th scope="col">Düzenle</th>
+                                <th scope="col">Sil</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div style="display: none">{{$sira=1}}</div>
+                            @foreach ($list as $item)
+                            <tr>
+                                <th scope="row">{{$sira++}}</th>
+                                <td>{{$item->id}}</td>
+                                <td>{{$item->yemek_kategori_ad}}</td>
+                                <td>
+                                    <a href="{{route('duzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
+                                        <span class="fa fa-pencil"></span>
+                                    </a>
+                                    
+                                </td>
+                                <td>
+                                   
+                                    <form action="{{route('sil', $item->id)}}" method="POST">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }} 
+                                    <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
+                                        <span class="fa fa-trash"></span>
+                                    </button>
+                                </form>
+                                </td>
+                            </tr>    
+                            @endforeach
+                                                                        
+                        </tbody>
+                    </table>
+                
             </div>
         </div>
     </div>

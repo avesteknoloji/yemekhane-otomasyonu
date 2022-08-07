@@ -16,7 +16,7 @@ public function index(){
        // request()->flash();
         //$aranan = request('aranan');
         //$ust_id = request('ust_id');
-        $list = yemek_kategori::orderBy('yemek_kategori_ad','asc')->get();
+        $list = yemek_kategori::orderBy('id','asc')->get();
         //::with('yemek_kategori_ust')
             //->where('yemek_kategori_ad', 'like', "%$aranan%")
             //->where('ust_id', $ust_id)
@@ -82,11 +82,9 @@ public function kaydet($id=0){
 }
 
 public function sil($id=0){
-
-    yemek_kategori::findorFail($id)->delete();
-    //echo "silinen ".$id;
-    //return redirect()->route('kategori')->with('message',"Kategori Başarı ile Silindi");
-    return back()->with('message',"Kategori Başarı ile Silindi");
+   
+    yemek_kategori::findorFail($id)->delete();   
+    return back()->with('message',$id.' Numaralı Kategori Başarı İle Silindi');
 }
 
 }

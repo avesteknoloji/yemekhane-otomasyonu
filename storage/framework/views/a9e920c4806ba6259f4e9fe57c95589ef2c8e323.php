@@ -38,7 +38,7 @@
 	                                <input id="checkbox1" type="checkbox" />
 	                                <label class="text-muted" for="checkbox1">Remember password</label>
 	                            </div>
-	                            <a class="link" href="<?php echo e({{ route('forget-password')); ?> }}">Forgot password?</a>
+	                            <a class="link" href="#">Forgot password?</a>
 	                        </div>
 	                        <div class="form-group">
 	                            <button class="btn btn-primary btn-block" type="submit">Sign in</button>

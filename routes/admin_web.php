@@ -192,12 +192,12 @@ Route::prefix('ecommerce')->group( function(){
 	Route::view('pricingxx', 'admin.apps.ecommerce.pricing-view')->name('pricingxx');
 });
 
-Route::group(['prefix' => 'kategori'], function () {
+Route::group(['prefix' => 'kategoriler'], function () {
 	Route::get('kategori',[kategoriController::class,'index'])->name('kategori');
 	Route::get('yeni',[kategoriController::class,'form'])->name('yeni');
 	Route::get('duzenle/{id}',[kategoriController::class,'form'])->name('duzenle');
 	Route::post('kaydet/{id?}',[kategoriController::class,'kaydet'])->name('kaydet');
-	Route::get('sil/{id}',[kategoriController::class,'sil'])->name('sil');
+	Route::delete('sil/{id}',[kategoriController::class,'sil'])->name('sil');
 	//Route::post('guncelle/{id}',[kategoriController::class,'kaydet'])->name('guncelle');
 	//Route::match(['get', 'post'], '/', 'KategoriController@index')->name('yonetim.kategori');
 	//Route::get('/yeni', 'KategoriController@form')->name('yonetim.kategori.yeni');

@@ -45,33 +45,49 @@
                 <?php endif; ?>
             </div>
             <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Kategoriler</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <tr>
-                            <th scope="row"><?php echo e($item->id); ?></th>
-                            <td><?php echo e($item->yemek_kategori_ad); ?></td>
-                            <td>
-                                <a href="<?php echo e(route('duzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
-                                    <span class="fa fa-pencil"></span>
-                                </a>
-                                <a href="<?php echo e(route('sil', $item->id)); ?>" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Sil" onclick="return confirm('Emin misiniz?')">
-                                    <span class="fa fa-trash"></span>
-                                </a>
-                            </td>
-                            
-                        </tr>    
-                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                                                                       
-                    </tbody>
-                </table>
+                
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sıra</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Kategoriler</th>
+                                <th scope="col">Düzenle</th>
+                                <th scope="col">Sil</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div style="display: none"><?php echo e($sira=1); ?></div>
+                            <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <tr>
+                                <th scope="row"><?php echo e($sira++); ?></th>
+                                <td><?php echo e($item->id); ?></td>
+                                <td><?php echo e($item->yemek_kategori_ad); ?></td>
+                                <td>
+                                    <a href="<?php echo e(route('duzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
+                                        <span class="fa fa-pencil"></span>
+                                    </a>
+                                    
+                                </td>
+                                <td>
+                                   
+                                    <form action="<?php echo e(route('sil', $item->id)); ?>" method="POST">
+                                        <?php echo e(csrf_field()); ?>
+
+                                        <?php echo e(method_field('DELETE')); ?> 
+                                    <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
+                                        <span class="fa fa-trash"></span>
+                                    </button>
+                                </form>
+                                </td>
+                            </tr>    
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                                                        
+                        </tbody>
+                    </table>
+                
             </div>
         </div>
     </div>
