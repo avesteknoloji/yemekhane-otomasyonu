@@ -16,8 +16,9 @@ class UsersController extends Controller
     ]);
     
     if(auth()->attempt(['user_email'=>request('userEmail'), 'password'=>request('userPass')])){
+            $user=auth()->user();
             request()->session()->regenerate();
-            return redirect()->route('/dashboard');
+            return redirect()->route('index',compact('user'));
         }
     }
 
