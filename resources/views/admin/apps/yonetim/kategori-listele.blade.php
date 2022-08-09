@@ -1,6 +1,6 @@
 @extends('layouts.admin.master')
 
-@section('title')Kategori Listeleme
+@section('title')
  {{ $title }}
 @endsection
 
@@ -13,10 +13,10 @@
 @section('content')
 	@component('components.breadcrumb')
 		@slot('breadcrumb_title')
-			<h3>Kategoriler</h3>
+			<h3>Yemek Kategorileri</h3>
 		@endslot
-		<li class="breadcrumb-item">Kategori İşlemleri</li>
-		<li class="breadcrumb-item active">Kategoriler</li>
+		<li class="breadcrumb-item">Yönetim</li>
+		<li class="breadcrumb-item active">Yemek Kategorileri</li>
 	@endcomponent
     <div class="row">
         <div class="col-sm-6">

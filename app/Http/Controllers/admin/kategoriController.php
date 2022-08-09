@@ -31,8 +31,9 @@ public function index(){
     //$anakategoriler = Kategori::whereRaw('ust_id is null')->get();
     
     //return view('yonetim.kategori.index', compact('list', 'anakategoriler'));
+    $title="Yemek Kategorileri";
 
-    return view('admin.apps.kategoriler.kategori-listele', compact('list'));
+    return view('admin.apps.yonetim.kategori-listele', compact('list','title'));
 }
 
 public function form($id=0){
@@ -48,7 +49,7 @@ public function form($id=0){
     } 
      
     
-    return view('admin.apps.kategoriler.form', compact('entry','list','ust_kategori'));
+    return view('admin.apps.yonetim.form', compact('entry','list','ust_kategori'));
 }
 
 public function kaydet($id=0){

@@ -51,8 +51,11 @@
                         <thead>
                             <tr>
                                 <th scope="col">Sıra</th>
-                                <th scope="col">ID</th>
-                                <th scope="col">Kategoriler</th>
+                                <th scope="col">Slug</th>
+                                <th scope="col">Adı</th>
+                                <th scope="col">Fiyatı</th>
+                                <th scope="col">Stok</th>
+                                <th scope="col">Ebeveyn Katagori</th>
                                 <th scope="col">Düzenle</th>
                                 <th scope="col">Sil</th>
                                 
@@ -60,11 +63,14 @@
                         </thead>
                         <tbody>
                             <div style="display: none"><?php echo e($sira=1); ?></div>
-                            <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <?php $__currentLoopData = $yemekler; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <th scope="row"><?php echo e($sira++); ?></th>
-                                <td><?php echo e($item->id); ?></td>
-                                <td><?php echo e($item->yemek_kategori_ad); ?></td>
+                                <td><?php echo e($item->slug); ?></td>
+                                <td><?php echo e($item->yemek_ad); ?></td>
+                                <td><?php echo e($item->yemek_fiyat); ?></td>
+                                <td><?php echo e($item->stok); ?></td>
+                                <td>?</td>
                                 <td>
                                     <a href="<?php echo e(route('duzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>
@@ -93,4 +99,4 @@
     </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/kategoriler/kategori-listele.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/yonetim/yemek-listele.blade.php ENDPATH**/ ?>

@@ -14,10 +14,10 @@
 <?php $__env->startSection('content'); ?>
 	<?php $__env->startComponent('components.breadcrumb'); ?>
 		<?php $__env->slot('breadcrumb_title'); ?>
-			<h3>Kategoriler</h3>
+			<h3>Yemek Kategorileri</h3>
 		<?php $__env->endSlot(); ?>
-		<li class="breadcrumb-item">Kategori İşlemleri</li>
-		<li class="breadcrumb-item active">Kategoriler</li>
+		<li class="breadcrumb-item">Yönetim</li>
+		<li class="breadcrumb-item active">Yemek Kategorileri</li>
 	<?php echo $__env->renderComponent(); ?>
     <div class="row">
         <div class="col-sm-6">
@@ -93,4 +93,4 @@
     </div>
 
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/kategoriler/kategori-listele.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/yonetim/kategori-listele.blade.php ENDPATH**/ ?>

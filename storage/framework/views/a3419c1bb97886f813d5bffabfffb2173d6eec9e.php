@@ -32,24 +32,10 @@
                             <h6>General</h6>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title <?php echo e(prefixActive('/dashboard')); ?>" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>                  
-                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/dashboard')); ?>;">
-                            <li><a href="<?php echo e(route('index')); ?>" class="<?php echo e(routeActive('index')); ?>">Default</a></li>
-                            <li><a href="<?php echo e(route('dashboard-02')); ?>" class="<?php echo e(routeActive('dashboard-02')); ?>">Ecommerce</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title <?php echo e(prefixActive('/widgets')); ?>" href="javascript:void(0)"><i data-feather="airplay"></i><span>Widgets</span></a>
-                        <ul class="nav-submenu menu-content"  style="display: <?php echo e(prefixBlock('/widgets')); ?>;">
-                            <li><a href="<?php echo e(route('general-widget')); ?>" class="<?php echo e(routeActive('general-widget')); ?>">General</a></li>
-                            <li><a href="<?php echo e(route('chart-widget')); ?>" class="<?php echo e(routeActive('chart-widget')); ?>">Chart</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
+                                        <li class="dropdown">
                         <a class="nav-link menu-title <?php echo e(prefixActive('/ecommerce')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Menü İşlemleri</span></a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/ecommerce')); ?>;">
-                            <li><a href="<?php echo e(route('yemek')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
+                            <li><a href="<?php echo e(route('yemek')); ?>" class="<?php echo e(routeActive('product')); ?>">Sipariş Oluşturma</a></li>
                             <li><a href="<?php echo e(route('test')); ?>" class="<?php echo e(routeActive('product')); ?>">Test Sayfası</a></li>
                             <li><a href="<?php echo e(route('product-page')); ?>" class="<?php echo e(routeActive('product-page')); ?>">Product page</a></li>
                             <li><a href="<?php echo e(route('list-products')); ?>" class="<?php echo e(routeActive('list-products')); ?>">Product list</a></li>
@@ -63,13 +49,29 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="nav-link menu-title <?php echo e(prefixActive('/kategori')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Kategori İşlemleri</span></a>
-                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/kategori')); ?>;">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('/yonetim')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Yönetim</span></a>
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/yonetim')); ?>;">
                            <li><a href="<?php echo e(route('kategori')); ?>" class="<?php echo e(routeActive('product')); ?>">Kategoriler</a></li>
-                          
+                           <li><a href="<?php echo e(route('yemek-listesi')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
                            
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('/dashboard')); ?>" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>                  
+                        <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/dashboard')); ?>;">
+                            <li><a href="<?php echo e(route('index')); ?>" class="<?php echo e(routeActive('index')); ?>">Default</a></li>
+                            <li><a href="<?php echo e(route('dashboard-02')); ?>" class="<?php echo e(routeActive('dashboard-02')); ?>">Ecommerce</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title <?php echo e(prefixActive('/widgets')); ?>" href="javascript:void(0)"><i data-feather="airplay"></i><span>Widgets</span></a>
+                        <ul class="nav-submenu menu-content"  style="display: <?php echo e(prefixBlock('/widgets')); ?>;">
+                            <li><a href="<?php echo e(route('general-widget')); ?>" class="<?php echo e(routeActive('general-widget')); ?>">General</a></li>
+                            <li><a href="<?php echo e(route('chart-widget')); ?>" class="<?php echo e(routeActive('chart-widget')); ?>">Chart</a></li>
+                        </ul>
+                    </li>
+
                     <li class="sidebar-main-title">
                         <div>
                             <h6>Components</h6>

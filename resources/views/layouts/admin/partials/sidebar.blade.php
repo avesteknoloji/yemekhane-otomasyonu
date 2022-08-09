@@ -32,24 +32,10 @@
                             <h6>General</h6>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/dashboard') }}" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>                  
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/dashboard') }};">
-                            <li><a href="{{route('index')}}" class="{{routeActive('index')}}">Default</a></li>
-                            <li><a href="{{route('dashboard-02')}}" class="{{routeActive('dashboard-02')}}">Ecommerce</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/widgets') }}" href="javascript:void(0)"><i data-feather="airplay"></i><span>Widgets</span></a>
-                        <ul class="nav-submenu menu-content"  style="display: {{ prefixBlock('/widgets') }};">
-                            <li><a href="{{ route('general-widget') }}" class="{{routeActive('general-widget')}}">General</a></li>
-                            <li><a href="{{ route('chart-widget') }}" class="{{routeActive('chart-widget')}}">Chart</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
+                                        <li class="dropdown">
                         <a class="nav-link menu-title {{ prefixActive('/ecommerce') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Menü İşlemleri</span></a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/ecommerce') }};">
-                            <li><a href="{{ route('yemek') }}" class="{{routeActive('product')}}">Yemekler</a></li>
+                            <li><a href="{{ route('yemek') }}" class="{{routeActive('product')}}">Sipariş Oluşturma</a></li>
                             <li><a href="{{ route('test') }}" class="{{routeActive('product')}}">Test Sayfası</a></li>
                             <li><a href="{{ route('product-page') }}" class="{{routeActive('product-page')}}">Product page</a></li>
                             <li><a href="{{ route('list-products') }}" class="{{routeActive('list-products')}}">Product list</a></li>
@@ -63,13 +49,29 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/kategori') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Kategori İşlemleri</span></a>
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/kategori') }};">
+                        <a class="nav-link menu-title {{ prefixActive('/yonetim') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Yönetim</span></a>
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/yonetim') }};">
                            <li><a href="{{ route('kategori') }}" class="{{routeActive('product')}}">Kategoriler</a></li>
-                          
+                           <li><a href="{{ route('yemek-listesi') }}" class="{{routeActive('product')}}">Yemekler</a></li>
                            
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('/dashboard') }}" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>                  
+                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/dashboard') }};">
+                            <li><a href="{{route('index')}}" class="{{routeActive('index')}}">Default</a></li>
+                            <li><a href="{{route('dashboard-02')}}" class="{{routeActive('dashboard-02')}}">Ecommerce</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link menu-title {{ prefixActive('/widgets') }}" href="javascript:void(0)"><i data-feather="airplay"></i><span>Widgets</span></a>
+                        <ul class="nav-submenu menu-content"  style="display: {{ prefixBlock('/widgets') }};">
+                            <li><a href="{{ route('general-widget') }}" class="{{routeActive('general-widget')}}">General</a></li>
+                            <li><a href="{{ route('chart-widget') }}" class="{{routeActive('chart-widget')}}">Chart</a></li>
+                        </ul>
+                    </li>
+
                     <li class="sidebar-main-title">
                         <div>
                             <h6>Components</h6>
