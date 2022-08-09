@@ -16,4 +16,6 @@ class yemek extends Model
     public function yemek_kategori(){
         return $this->belongsTo(yemek_kategori::class);
     }
+ 
+
 }

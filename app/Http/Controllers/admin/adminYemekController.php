@@ -11,6 +11,8 @@ class adminYemekController extends Controller
     public function index(){
 
         $title="Yemek Listesi";
+
+        //test
             
         $yemekler = yemek::orderBy('id','asc')->get();
 

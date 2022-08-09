@@ -70,7 +70,7 @@
                                 <td><?php echo e($item->yemek_ad); ?></td>
                                 <td><?php echo e($item->yemek_fiyat); ?></td>
                                 <td><?php echo e($item->stok); ?></td>
-                                <td>?</td>
+                                <td><?php echo e($item->detay->yemek_kategori_ad); ?></td>
                                 <td>
                                     <a href="<?php echo e(route('duzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>

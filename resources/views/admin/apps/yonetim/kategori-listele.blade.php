@@ -60,7 +60,7 @@
                             <div style="display: none">{{$sira=1}}</div>
                             @foreach ($list as $item)
                             <tr>
-                                <th scope="row">{{$sira++}}</th>
+                                <th scope="row">{{$sira++}} </th>
                                 <td>{{$item->id}}</td>
                                 <td>{{$item->yemek_kategori_ad}}</td>
                                 <td>
