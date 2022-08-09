@@ -68,7 +68,7 @@
                                 <td>{{$item->yemek_ad}}</td>
                                 <td>{{$item->yemek_fiyat}}</td>
                                 <td>{{$item->stok}}</td>
-                                <td>?</td>
+                                <td>***</td>
                                 <td>
                                     <a href="{{route('duzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>
