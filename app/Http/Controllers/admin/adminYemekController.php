@@ -12,7 +12,7 @@ class adminYemekController extends Controller
 
         $title="Yemek Listesi";
 
-        //test
+        //test orgninazation
             
         $yemekler = yemek::orderBy('id','asc')->get();
 
