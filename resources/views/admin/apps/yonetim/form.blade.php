@@ -49,6 +49,7 @@
 								<div class="col-sm-8">
 									<select class="form-control btn-square" id="yemekKategoriUst" name="yemek_kategori_ust">
 									
+										<option value="0">Ana Kategori</option>
 										@foreach ($list as $item)
 											<option {{$item->id==$ust_kategori->id ? 'selected':''}} value="{{$item->id}}">{{$item->yemek_kategori_ad}}</option>    
               							@endforeach

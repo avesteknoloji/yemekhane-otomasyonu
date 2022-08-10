@@ -15,7 +15,7 @@ class yemek extends Model
 
     public function kategori(){
         //yemekler şu id nolu kategoriye aittir anlamında
-        return $this->belongsTo(yemek_kategori::class,'id');
+        return $this->belongsTo(yemek_kategori::class,'yemek_kategori_id');
     }
  
 

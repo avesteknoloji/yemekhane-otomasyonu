@@ -51,6 +51,7 @@
 								<div class="col-sm-8">
 									<select class="form-control btn-square" id="yemekKategoriUst" name="yemek_kategori_ust">
 									
+										<option value="0">Ana Kategori</option>
 										<?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 											<option <?php echo e($item->id==$ust_kategori->id ? 'selected':''); ?> value="<?php echo e($item->id); ?>"><?php echo e($item->yemek_kategori_ad); ?></option>    
               							<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

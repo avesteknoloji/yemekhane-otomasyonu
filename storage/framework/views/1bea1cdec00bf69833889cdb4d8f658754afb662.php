@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="col-sm-6">  
-            <a href="<?php echo e(route('yeni')); ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="top">Yeni Ekle </a>
+            <a href="<?php echo e(route('yeniYemek')); ?>" class="btn btn-primary" data-toggle="tooltip" data-placement="top">Yeni Ekle </a>
         </div>
     </div>
     <div class="col-sm-12">
@@ -72,14 +72,14 @@
                                 <td><?php echo e($item->stok); ?></td>
                                 <td><?php echo e($item->kategori->yemek_kategori_ad ?? 'None'); ?></td>
                                 <td>
-                                    <a href="<?php echo e(route('duzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
+                                    <a href="<?php echo e(route('yemekDuzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>
                                     </a>
                                     
                                 </td>
                                 <td>
                                    
-                                    <form action="<?php echo e(route('sil', $item->id)); ?>" method="POST">
+                                    <form action="<?php echo e(route('yemekSil', $item->id)); ?>" method="POST">
                                         <?php echo e(csrf_field()); ?>
 
                                         <?php echo e(method_field('DELETE')); ?> 

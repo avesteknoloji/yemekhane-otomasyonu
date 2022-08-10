@@ -52,7 +52,7 @@
                         <a class="nav-link menu-title {{ prefixActive('/yonetim') }}" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Yönetim</span></a>
                         <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/yonetim') }};">
                            <li><a href="{{ route('kategori') }}" class="{{routeActive('product')}}">Kategoriler</a></li>
-                           <li><a href="{{ route('yemek-listesi') }}" class="{{routeActive('product')}}">Yemekler</a></li>
+                           <li><a href="{{ route('yemekListesi') }}" class="{{routeActive('product')}}">Yemekler</a></li>
                            
                         </ul>
                     </li>

@@ -52,7 +52,7 @@
                         <a class="nav-link menu-title <?php echo e(prefixActive('/yonetim')); ?>" href="javascript:void(0)"><i data-feather="shopping-bag"></i><span>Yönetim</span></a>
                         <ul class="nav-submenu menu-content" style="display: <?php echo e(prefixBlock('/yonetim')); ?>;">
                            <li><a href="<?php echo e(route('kategori')); ?>" class="<?php echo e(routeActive('product')); ?>">Kategoriler</a></li>
-                           <li><a href="<?php echo e(route('yemek-listesi')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
+                           <li><a href="<?php echo e(route('yemekListesi')); ?>" class="<?php echo e(routeActive('product')); ?>">Yemekler</a></li>
                            
                         </ul>
                     </li>

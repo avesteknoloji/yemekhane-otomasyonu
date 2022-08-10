@@ -200,8 +200,11 @@ Route::group(['prefix' => 'Yonetim'], function () {
 	Route::post('kaydet/{id?}',[kategoriController::class,'kaydet'])->name('kaydet');
 	Route::delete('sil/{id}',[kategoriController::class,'sil'])->name('sil');
 
-	Route::get('yemek-listesi',[adminYemekController::class,'index'])->name('yemek-listesi');
-	Route::get('yeni',[adminYemekController::class,'form'])->name('yeni');
+	Route::get('yemek-listesi',[adminYemekController::class,'index'])->name('yemekListesi');
+	Route::get('yeni-yemek',[adminYemekController::class,'form'])->name('yeniYemek');
+	Route::get('yemek-duzenle/{id}',[adminYemekController::class,'form'])->name('yemekDuzenle');
+	Route::post('yemek-kaydet/{id?}',[adminYemekController::class,'kaydet'])->name('yemekKaydet');
+	Route::delete('yemek-sil/{id}',[adminYemekController::class,'sil'])->name('yemekSil');
 
 });
 

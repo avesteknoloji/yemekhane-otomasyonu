@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="col-sm-6">  
-            <a href="{{route('yeni')}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top">Yeni Ekle </a>
+            <a href="{{route('yeniYemek')}}" class="btn btn-primary" data-toggle="tooltip" data-placement="top">Yeni Ekle </a>
         </div>
     </div>
     <div class="col-sm-12">
@@ -70,14 +70,14 @@
                                 <td>{{$item->stok}}</td>
                                 <td>{{$item->kategori->yemek_kategori_ad ?? 'None'}}</td>
                                 <td>
-                                    <a href="{{route('duzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
+                                    <a href="{{route('yemekDuzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>
                                     </a>
                                     
                                 </td>
                                 <td>
                                    
-                                    <form action="{{route('sil', $item->id)}}" method="POST">
+                                    <form action="{{route('yemekSil', $item->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }} 
                                     <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
