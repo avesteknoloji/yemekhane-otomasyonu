@@ -62,7 +62,7 @@
                             <div style="display: none"><?php echo e($sira=1); ?></div>
                             <?php $__currentLoopData = $list; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
-                                <th scope="row"><?php echo e($item->yemek_kategori->yemek_ad); ?> </th>
+                                <th scope="row"><?php echo e($sira++); ?> </th>
                                 <td><?php echo e($item->id); ?></td>
                                 <td><?php echo e($item->yemek_kategori_ad); ?></td>
                                 <td>

@@ -13,7 +13,8 @@ class yemek_kategori extends Model
     protected $table ="yemek_kategori";
     protected $guarded=[];
 
-    public function yemek(){
-        return $this->belongsTo(yemek::class);
+    public function yemekler(){
+        //kategorilerin  bir çok yemeği vardır
+        return $this->hasMany(yemek::class);
     }
 }

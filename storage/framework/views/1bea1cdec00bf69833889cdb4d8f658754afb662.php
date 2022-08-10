@@ -55,7 +55,7 @@
                                 <th scope="col">Adı</th>
                                 <th scope="col">Fiyatı</th>
                                 <th scope="col">Stok</th>
-                                <th scope="col">Ebeveyn Katagori</th>
+                                <th scope="col">Katagori</th>
                                 <th scope="col">Düzenle</th>
                                 <th scope="col">Sil</th>
                                 
@@ -70,7 +70,7 @@
                                 <td><?php echo e($item->yemek_ad); ?></td>
                                 <td><?php echo e($item->yemek_fiyat); ?></td>
                                 <td><?php echo e($item->stok); ?></td>
-                                <td><?php echo e($item->detay->yemek_kategori_ad); ?></td>
+                                <td><?php echo e($item->kategori->yemek_kategori_ad ?? 'None'); ?></td>
                                 <td>
                                     <a href="<?php echo e(route('duzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>

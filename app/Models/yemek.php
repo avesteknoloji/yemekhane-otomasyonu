@@ -13,8 +13,9 @@ class yemek extends Model
     protected $table ="yemek";
     protected $guarded=[];
 
-    public function yemek_kategori(){
-        return $this->belongsTo(yemek_kategori::class);
+    public function kategori(){
+        //yemekler şu id nolu kategoriye aittir anlamında
+        return $this->belongsTo(yemek_kategori::class,'id');
     }
  
 

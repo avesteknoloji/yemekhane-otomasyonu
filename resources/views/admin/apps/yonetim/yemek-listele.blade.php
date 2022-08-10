@@ -53,7 +53,7 @@
                                 <th scope="col">Adı</th>
                                 <th scope="col">Fiyatı</th>
                                 <th scope="col">Stok</th>
-                                <th scope="col">Ebeveyn Katagori</th>
+                                <th scope="col">Katagori</th>
                                 <th scope="col">Düzenle</th>
                                 <th scope="col">Sil</th>
                                 
@@ -68,7 +68,7 @@
                                 <td>{{$item->yemek_ad}}</td>
                                 <td>{{$item->yemek_fiyat}}</td>
                                 <td>{{$item->stok}}</td>
-                                <td>----</td>
+                                <td>{{$item->kategori->yemek_kategori_ad ?? 'None'}}</td>
                                 <td>
                                     <a href="{{route('duzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>
