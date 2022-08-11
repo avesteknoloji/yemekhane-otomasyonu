@@ -17,8 +17,8 @@ class CreateUsersRoleTable extends Migration
             $table->string('user_role_id',10);
             $table->primary('user_role_id');
             $table->string('user_role_name',25);
-            $table->unsignedInteger('user_annual_balance');
-            $table->unsignedInteger('user_monthly_balance');
+            $table->unsignedInteger('user_annual_balance')->nullable();
+            $table->unsignedInteger('user_monthly_balance')->nullable();
             $table->softDeletes(); 
             $table->timestamps();
         });

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 @include_once('admin_web.php');
 
 Route::get('/', function () {
-    return redirect()->route('index');
+    return redirect()->route('login-page');
 })->name('/');
 
 Route::view('sample-page', 'admin.pages.sample-page')->name('sample-page');
