@@ -16,7 +16,7 @@ class CreateSiparisTable extends Migration
         Schema::create('siparis', function (Blueprint $table) {
             $table->increments('id');
             $table->decimal('siparis_tutari',4,2);
-            $table->string('drum',160);
+            $table->string('durum',160);
             
             $table->integer('sepet_id')->unsigned();
 
