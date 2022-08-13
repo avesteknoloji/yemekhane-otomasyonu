@@ -1,20 +1,22 @@
-@extends('admin.authentication.master')
 
-@section('title')login
- {{ $title }}
-@endsection
 
-@push('css')
-@endpush
+<?php $__env->startSection('title'); ?>login
+ <?php echo e($title); ?>
 
-@section('content')
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startPush('css'); ?>
+<?php $__env->stopPush(); ?>
+
+<?php $__env->startSection('content'); ?>
     <section>
     <div class="container-fluid p-0">
         <div class="row">
             <div class="col-12">
                 <div class="login-card">
-                    <form class="theme-form login-form" action="{{route('login-page')}}" method="POST">
-                        {{ csrf_field() }}
+                    <form class="theme-form login-form" action="<?php echo e(route('login-page')); ?>" method="POST">
+                        <?php echo e(csrf_field()); ?>
+
                         <h4>Yemekhane Yönetim Sistemi</h4>
                         <div class="form-group">
                             <label>Eposta</label>
@@ -43,7 +45,8 @@
 </section>
 
 	
-    @push('scripts')
-    @endpush
+    <?php $__env->startPush('scripts'); ?>
+    <?php $__env->stopPush(); ?>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.authentication.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\yemekhane_otomasyon\yemekhane-otomasyonu\resources\views/admin/authentication/login.blade.php ENDPATH**/ ?>

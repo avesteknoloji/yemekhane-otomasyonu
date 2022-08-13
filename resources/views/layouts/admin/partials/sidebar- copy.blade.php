@@ -2,7 +2,7 @@
     <div class="sidebar-user text-center">
         <a class="setting-primary" href="javascript:void(0)"><i data-feather="settings"></i></a><img class="img-90 rounded-circle" src="{{asset('assets/images/dashboard/1.png')}}" alt="" />
         <div class="badge-bottom"><span class="badge badge-primary">New</span></div>
-        <a href="user-profile"> <h6 class="mt-3 f-14 f-w-600">{{Auth::user()->user_name ?? 'Sistem Kullanıcısı'}}</h6></a>
+        <a href="user-profile"> <h6 class="mt-3 f-14 f-w-600">Emay Walter</h6></a>
         <p class="mb-0 font-roboto">Human Resources Department</p>
         <ul>
             <li>
@@ -26,18 +26,6 @@
                 <ul class="nav-menu custom-scrollbar">
                     <li class="back-btn">
                         <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-                    </li>
-                    <li class="sidebar-main-title">
-                        <div>
-                            <h6>Kullanıcı İşlemleri</h6>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a class="nav-link menu-title {{ prefixActive('/kullanici') }}" href="javascript:void(0)"><i data-feather="users"></i><span>Ekleme İşlemleri</span></a>                  
-                        <ul class="nav-submenu menu-content" style="display: {{ prefixBlock('/kullanici') }};">
-                            <li><a href="{{route('group-add')}}" class="{{routeActive('group-add')}}">Kullanıcı Grubu Ekleme</a></li>
-                            <li><a href="{{route('user-add')}}" class="{{routeActive('user-add')}}">Kulanıcı Ekleme</a></li>
-                        </ul>
                     </li>
                     <li class="sidebar-main-title">
                         <div>

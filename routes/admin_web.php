@@ -201,7 +201,9 @@ Route::prefix('users')->group( function(){
 	Route::view('user-profile', 'admin.apps.user-profile')->name('user-profile');
 	Route::view('edit-profile', 'admin.apps.edit-profile')->name('edit-profile');
 	Route::view('user-cards', 'admin.apps.user-cards')->name('user-cards');
+
 });
+
 
 Route::view('bookmark', 'admin.apps.bookmark')->name('bookmark');
 Route::view('contacts', 'admin.apps.contacts')->name('contacts');
