@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\yemekController;
+use App\Http\Controllers\admin\kategoriController;
+use App\Http\Controllers\admin\adminYemekController;
+
 
 Route::prefix('admin')->group(function () {
 });
@@ -174,7 +178,10 @@ Route::view('file-manager', 'admin.apps.file-manager')->name('file-manager');
 Route::view('kanban', 'admin.apps.kanban')->name('kanban');
 
 Route::prefix('ecommerce')->group( function(){
-	Route::view('product', 'admin.apps.ecommerce.product')->name('product');
+	
+	Route::get('yemek',[yemekController::class,'index'])->name('yemek');
+	Route::post('yemek',[yemekController::class,'ara'])->name('yemek_ara');
+	Route::view('test', 'admin.apps.ecommerce.test')->name('test');
 	Route::view('product-page', 'admin.apps.ecommerce.product-page')->name('product-page');
 	Route::view('list-products', 'admin.apps.ecommerce.list-products')->name('list-products');
 	Route::view('payment-details', 'admin.apps.ecommerce.payment-details')->name('payment-details');
@@ -183,7 +190,22 @@ Route::prefix('ecommerce')->group( function(){
 	Route::view('cart', 'admin.apps.ecommerce.cart')->name('cart');
 	Route::view('list-wish', 'admin.apps.ecommerce.list-wish')->name('list-wish');
 	Route::view('checkout', 'admin.apps.ecommerce.checkout')->name('checkout');
-	Route::view('pricing', 'admin.apps.ecommerce.pricing')->name('pricing');
+	Route::view('pricingxx', 'admin.apps.ecommerce.pricing-view')->name('pricingxx');
+});
+
+Route::group(['prefix' => 'Yonetim'], function () {
+	Route::get('yemek-kategori',[kategoriController::class,'index'])->name('kategori');
+	Route::get('yeni',[kategoriController::class,'form'])->name('yeni');
+	Route::get('kategori-duzenle/{id}',[kategoriController::class,'form'])->name('duzenle');
+	Route::post('kaydet/{id?}',[kategoriController::class,'kaydet'])->name('kaydet');
+	Route::delete('sil/{id}',[kategoriController::class,'sil'])->name('sil');
+
+	Route::get('yemek-listesi',[adminYemekController::class,'index'])->name('yemekListesi');
+	Route::get('yeni-yemek',[adminYemekController::class,'form'])->name('yeniYemek');
+	Route::get('yemek-duzenle/{id}',[adminYemekController::class,'form'])->name('yemekDuzenle');
+	Route::post('yemek-kaydet/{id?}',[adminYemekController::class,'kaydet'])->name('yemekKaydet');
+	Route::delete('yemek-sil/{id}',[adminYemekController::class,'sil'])->name('yemekSil');
+
 });
 
 Route::prefix('email')->group( function(){

@@ -1,3 +1,13 @@
+document.getElementById('filter_product_id').addEventListener("change",function(){
+  
+  //dropdownlistden seçilen değerin id'si yemek kategori id değişkeni ile tutuyoruz
+  let yemekKategoriId= this.value || this.options[this.selectedIndex].value
+  //adres çubuğunda link düzenlemesi yapılıyor. filtering company videosu
+    window.location.href=window.location.href.split('?')[0]+'?yemekKategoriId='+yemekKategoriId
+})
+
+
+
 /*
  * ATTENTION: An "eval-source-map" devtool has been used.
  * This devtool is neither made for production nor for readable output files.
