@@ -18,6 +18,7 @@ class CreateYemekTable extends Migration
 
             $table->string('slug',160);
             $table->string('yemek_ad',160);
+            $table->string('yemek_resmi',50);
             $table->decimal('yemek_fiyat',4,2);
             $table->unsignedSmallInteger('stok');
             $table->integer('yemek_kategori_id')->unsigned();

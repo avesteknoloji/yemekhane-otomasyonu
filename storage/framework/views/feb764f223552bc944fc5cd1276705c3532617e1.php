@@ -297,7 +297,7 @@
 	                    <div class="card">
 	                        <div class="product-box">
 	                            <div class="product-img">
-	                                <img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/'.$item->slug.'.jpg')); ?>" alt="" />
+	                                <img class="img-fluid" src="<?php echo e(asset('uploads/images/yemek_resimleri/'.$item->yemek_resmi)); ?>" alt="" />
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>

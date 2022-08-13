@@ -51,11 +51,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">Sıra</th>
+                                <th scope="col">Resim</th>
                                 <th scope="col">Slug</th>
                                 <th scope="col">Adı</th>
                                 <th scope="col">Fiyatı</th>
                                 <th scope="col">Stok</th>
-                                <th scope="col">Katagori</th>
+                                <th scope="col">Kategori</th>
                                 <th scope="col">Düzenle</th>
                                 <th scope="col">Sil</th>
                                 
@@ -66,11 +67,17 @@
                             <?php $__currentLoopData = $yemekler; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                             <tr>
                                 <th scope="row"><?php echo e($sira++); ?></th>
+                                <td>
+                                    <?php if($item->yemek_resmi!=null): ?>
+									<img src="<?php echo e(asset('uploads/images/yemek_resimleri/'.$item->yemek_resmi)); ?>" style="height:40px;">
+										
+									<?php endif; ?>
+                                </td>
                                 <td><?php echo e($item->slug); ?></td>
                                 <td><?php echo e($item->yemek_ad); ?></td>
                                 <td><?php echo e($item->yemek_fiyat); ?></td>
                                 <td><?php echo e($item->stok); ?></td>
-                                <td><?php echo e($item->kategori->yemek_kategori_ad ?? 'None'); ?></td>
+                                <td><?php echo e($item->kategori->yemek_kategori_ad ?? 'Kategori Yok'); ?></td>
                                 <td>
                                     <a href="<?php echo e(route('yemekDuzenle', $item->id)); ?>" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>

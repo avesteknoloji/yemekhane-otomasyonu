@@ -31,7 +31,7 @@
 									
 					</div>
 					<div class="card-body">
-						<form class="theme-form" method="POST" action="<?php echo e(route('yemekKaydet',$entry->id)); ?>">
+						<form class="theme-form" method="POST" action="<?php echo e(route('yemekKaydet',$entry->id)); ?>" enctype="multipart/form-data">
 							<?php echo e(csrf_field()); ?>
 
 							<div class="mb-3 row">
@@ -68,7 +68,17 @@
               							<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 																													
 									</select>			
-								</div>					
+								</div>	
+								<div class="mb-3 row">
+									<label class="col-sm-4 col-form-label">Resim</label>
+									<div class="col-sm-8">
+										<input class="form-control" id="yemek_resmi" name="yemek_resmi" type="file"  value=""/>
+									</div>
+									<?php if($entry->yemek_resmi!=null): ?>
+									<img src="\uploads\images\yemek_resimleri\<?php echo e($entry->yemek_resmi); ?>" style="height:70%; width:70%;  margin-right: 20px;" class="thumbnail pull-left">
+										
+									<?php endif; ?>
+								</div>				
 							</div>
 							
 							

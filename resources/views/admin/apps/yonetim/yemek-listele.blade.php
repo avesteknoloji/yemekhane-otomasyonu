@@ -49,11 +49,12 @@
                         <thead>
                             <tr>
                                 <th scope="col">Sıra</th>
+                                <th scope="col">Resim</th>
                                 <th scope="col">Slug</th>
                                 <th scope="col">Adı</th>
                                 <th scope="col">Fiyatı</th>
                                 <th scope="col">Stok</th>
-                                <th scope="col">Katagori</th>
+                                <th scope="col">Kategori</th>
                                 <th scope="col">Düzenle</th>
                                 <th scope="col">Sil</th>
                                 
@@ -64,11 +65,17 @@
                             @foreach ($yemekler as $item)
                             <tr>
                                 <th scope="row">{{$sira++}}</th>
+                                <td>
+                                    @if ($item->yemek_resmi!=null)
+									<img src="{{asset('uploads/images/yemek_resimleri/'.$item->yemek_resmi)}}" style="height:40px;">
+										
+									@endif
+                                </td>
                                 <td>{{$item->slug}}</td>
                                 <td>{{$item->yemek_ad}}</td>
                                 <td>{{$item->yemek_fiyat}}</td>
                                 <td>{{$item->stok}}</td>
-                                <td>{{$item->kategori->yemek_kategori_ad ?? 'None'}}</td>
+                                <td>{{$item->kategori->yemek_kategori_ad ?? 'Kategori Yok'}}</td>
                                 <td>
                                     <a href="{{route('yemekDuzenle', $item->id)}}" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="Düzenle">
                                         <span class="fa fa-pencil"></span>
