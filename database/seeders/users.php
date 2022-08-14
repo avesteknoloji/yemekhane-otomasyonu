@@ -19,7 +19,7 @@ class users extends Seeder
 
         $initial[]=[
             'user_name' => 'Sait AYYILDIZ', 
-            'user_pass'=>Hash::make(request(123456)),  
+            'user_pass'=>Hash::make('123456'),  
             'user_email'=>'saitayyilidiz@gmail.com', 
             'user_role_id'=>5,      
             'created_at'=>now(),
