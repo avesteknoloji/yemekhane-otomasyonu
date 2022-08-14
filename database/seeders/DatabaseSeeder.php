@@ -15,8 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(YemekKategoriSeeder::class);
-        $this->call(YemekSeeder::class);
-        
+
+       $this->call([users_role::class,   
+       users::class,
+       YemekSeeder::class,
+       YemekKategoriSeeder::class]);
+ 
     }
 }
