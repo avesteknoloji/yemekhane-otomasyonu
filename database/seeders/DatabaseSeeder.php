@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\yemek;
+use App\Models\yemek_kategori;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,8 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       $this->call([users_role::class,
-    
-       users::class]); // \App\Models\User::factory(10)->create();
+
+       $this->call([users_role::class,   
+       users::class,
+       YemekSeeder::class,
+       YemekKategoriSeeder::class]);
+ 
     }
 }

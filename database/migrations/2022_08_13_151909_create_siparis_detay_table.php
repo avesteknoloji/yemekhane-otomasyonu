@@ -14,11 +14,10 @@ class CreateSiparisDetayTable extends Migration
     public function up()
     {
         Schema::create('siparis_detay', function (Blueprint $table) {
-            
             $table->increments('id');
             $table->decimal('fiyat',4,2);
             $table->unsignedSmallInteger('adet');
-            $table->string('drum',160);
+            $table->string('durum',160);
             
             $table->integer('yemek_id')->unsigned();
 
@@ -37,8 +36,6 @@ class CreateSiparisDetayTable extends Migration
 
             $table->softDeletes();  
             $table->timestamps();
-
-
 
         });
     }
