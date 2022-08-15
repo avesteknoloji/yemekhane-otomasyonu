@@ -18,7 +18,7 @@ class CreateSiparisTable extends Migration
             $table->decimal('siparis_tutari',4,2);
             $table->string('durum',160);
             
-            $table->integer('sepet_id')->unsigned();
+            $table->integer('sepet_id')->unsigned()->unique();
 
             $table->foreign('sepet_id')
             ->references('id')

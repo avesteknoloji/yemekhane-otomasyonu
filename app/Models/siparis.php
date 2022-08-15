@@ -6,15 +6,15 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class sepet extends Model
+class siparis extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $table="sepet";
-    protected $guarded=[];
 
-    public function siparis(){
-        return $this->hasone(siparis::class);
+    protected $table='siparis';
+    protected $fillable=['siparis_tutari', 'durum', 'sepet_id'];
+
+    public function sepet(){
+        return $this->belongsTo(sepet::class,'sepet_id');
     }
 }
-
