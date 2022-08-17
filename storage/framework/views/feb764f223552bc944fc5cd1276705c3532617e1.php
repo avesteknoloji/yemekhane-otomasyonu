@@ -136,134 +136,7 @@
 	                                                <input id="u-range-03" type="text" />
 	                                                <h6 class="f-w-600">New Products</h6>
 	                                            </div>
-	                                            <div class="product-filter pb-0 new-products">
-	                                                <div class="owl-carousel owl-theme" id="testimonial">
-	                                                    <div class="item">
-	                                                        <div class="product-box">
-	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" data-original-title="" title="" /></div>
-	                                                                <div class="media-body">
-	                                                                    <div class="product-details">
-	                                                                        <div>
-	                                                                            <ul>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                            </ul>
-	                                                                            <p class="mb-0 f-w-700">Fancy Shirt</p>
-	                                                                            <div class="f-w-500">$100.00</div>
-	                                                                        </div>
-	                                                                    </div>
-	                                                                </div>
-	                                                            </div>
-	                                                        </div>
-	                                                        <div class="product-box">
-	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" data-original-title="" title="" /></div>
-	                                                                <div class="media-body">
-	                                                                    <div class="product-details">
-	                                                                        <div>
-	                                                                            <ul>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                            </ul>
-	                                                                            <p class="mb-0 f-w-700">Fancy Shirt</p>
-	                                                                            <div class="f-w-500">$100.00</div>
-	                                                                        </div>
-	                                                                    </div>
-	                                                                </div>
-	                                                            </div>
-	                                                        </div>
-	                                                        <div class="product-box">
-	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" data-original-title="" title="" /></div>
-	                                                                <div class="media-body">
-	                                                                    <div class="product-details">
-	                                                                        <div>
-	                                                                            <ul>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                            </ul>
-	                                                                            <p class="mb-0 f-w-700">Fancy Shirt</p>
-	                                                                            <div class="f-w-500">$100.00</div>
-	                                                                        </div>
-	                                                                    </div>
-	                                                                </div>
-	                                                            </div>
-	                                                        </div>
-	                                                    </div>
-	                                                    <div class="item">
-	                                                        <div class="product-box">
-	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" data-original-title="" title="" /></div>
-	                                                                <div class="media-body">
-	                                                                    <div class="product-details">
-	                                                                        <div>
-	                                                                            <ul>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                            </ul>
-	                                                                            <p class="mb-0 f-w-700">Fancy Shirt</p>
-	                                                                            <div class="f-w-500">$100.00</div>
-	                                                                        </div>
-	                                                                    </div>
-	                                                                </div>
-	                                                            </div>
-	                                                        </div>
-	                                                        <div class="product-box">
-	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/02.jpg')); ?>" alt="" data-original-title="" title="" /></div>
-	                                                                <div class="media-body">
-	                                                                    <div class="product-details">
-	                                                                        <div>
-	                                                                            <ul>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                            </ul>
-	                                                                            <p class="mb-0 f-w-700">Fancy Shirt</p>
-	                                                                            <div class="f-w-500">$100.00</div>
-	                                                                        </div>
-	                                                                    </div>
-	                                                                </div>
-	                                                            </div>
-	                                                        </div>
-	                                                        <div class="product-box">
-	                                                            <div class="media">
-	                                                                <div class="product-img me-3"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/03.jpg')); ?>" alt="" data-original-title="" title="" /></div>
-	                                                                <div class="media-body">
-	                                                                    <div class="product-details">
-	                                                                        <div>
-	                                                                            <ul>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                                <li><i class="fa fa-star font-warning"></i></li>
-	                                                                            </ul>
-	                                                                            <p class="mb-0 f-w-700">Fancy Shirt</p>
-	                                                                            <div class="f-w-500">$100.00</div>
-	                                                                        </div>
-	                                                                    </div>
-	                                                                </div>
-	                                                            </div>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>
-	                                            </div>
+	                                            
 	                                            <div class="product-filter text-center"><img class="img-fluid banner-product" src="<?php echo e(asset('assets/images/ecommerce/banner.jpg')); ?>" alt="" data-original-title="" title="" /></div>
 	                                        </div>
 	                                    </div>
@@ -301,7 +174,11 @@
 	                                <div class="product-hover">
 	                                    <ul>
 	                                        <li>
-	                                            <a href="cart"><i class="icon-shopping-cart"></i></a>
+												
+												
+												
+												<a href="#" id="<?php echo e($item->id); ?>" class="cartLink"><i class="icon-shopping-cart"></i></a>
+												
 	                                        </li>
 	                                        <li>
 	                                            <a data-bs-toggle="modal" data-bs-target="#exampleModalCenter16"><i class="icon-eye"></i></a>
@@ -309,51 +186,7 @@
 	                                    </ul>
 	                                </div>
 	                            </div>
-	                            <div class="modal fade" id="exampleModalCenter16">
-	                                <div class="modal-dialog modal-lg modal-dialog-centered">
-	                                    <div class="modal-content">
-	                                        <div class="modal-header">
-	                                            <div class="product-box row">
-	                                                <div class="product-img col-lg-6"><img class="img-fluid" src="<?php echo e(asset('assets/images/ecommerce/01.jpg')); ?>" alt="" /></div>
-	                                                <div class="product-details col-lg-6 text-start">
-	                                                    <a href="product-page"> <h4><?php echo e($item->yemek_ad); ?></h4></a>
-	                                                    <div class="product-price">
-	                                                        $26.00
-	                                                        <del>$35.00</del>
-	                                                    </div>
-	                                                    <div class="product-view">
-	                                                        <h6 class="f-w-600">Product Details</h6>
-	                                                        <p class="mb-0">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo.</p>
-	                                                    </div>
-	                                                    <div class="product-size">
-	                                                        <ul>
-	                                                            <li>
-	                                                                <button class="btn btn-outline-light" type="button">M</button>
-	                                                            </li>
-	                                                            <li>
-	                                                                <button class="btn btn-outline-light" type="button">L</button>
-	                                                            </li>
-	                                                            <li>
-	                                                                <button class="btn btn-outline-light" type="button">Xl</button>
-	                                                            </li>
-	                                                        </ul>
-	                                                    </div>
-	                                                    <div class="product-qnty">
-	                                                        <h6 class="f-w-600">Quantity</h6>
-	                                                        <fieldset>
-	                                                            <div class="input-group">
-	                                                                <input class="touchspin text-center" type="text" value="5" />
-	                                                            </div>
-	                                                        </fieldset>
-	                                                        <div class="addcart-btn"><a class="btn btn-primary me-3" href="cart">Add to Cart </a><a class="btn btn-primary" href="product-page">View Details</a></div>
-	                                                    </div>
-	                                                </div>
-	                                            </div>
-	                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-	                                        </div>
-	                                    </div>
-	                                </div>
-	                            </div>
+	                          
 	                            <div class="product-details">
 	                                <a href="product-page"> <h4><?php echo e($item->yemek_ad); ?></h4></a>
 	                                <p><?php echo e($item->slug); ?></p>
@@ -388,6 +221,31 @@
     <script src="<?php echo e(asset('assets/js/tooltip-init.js')); ?>"></script>
     <script src="<?php echo e(asset('assets/js/product-tab.js')); ?>"></script>
 	<?php $__env->stopPush(); ?>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+	</script>
+	<script>
+	$(document).ready(function(){
+		$('.cartLink').click(function(){
+	
+			id=this.id;
+			alert(id);
+			
+			$.ajax({
+				url:"<?php echo e(route('sepeteEkle')); ?>",
+				headers:{'X-CSRF-TOKEN':'<?php echo e(csrf_token()); ?>'},
+				method:"GET",
+				data:{yemekID:id},
+				success:function(result){
+					alert("Sepete Eklendi")
+				}
+			});
+
+		});
+	});
+	</script>
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/ecommerce/yemek.blade.php ENDPATH**/ ?>

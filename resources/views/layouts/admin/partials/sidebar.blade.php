@@ -54,7 +54,7 @@
                             <li><a href="{{ route('payment-details') }}" class="{{routeActive('payment-details')}}">Payment Details</a></li>
                             <li><a href="{{ route('order-history') }}" class="{{routeActive('order-history')}}">Order History</a></li>
                             <li><a href="{{ route('invoice-template') }}" class="{{routeActive('invoice-template')}}">Invoice</a></li>
-                            <li><a href="{{ route('cart') }}" class="{{routeActive('cart')}}">Cart</a></li>
+                            <li><a href="#' class="{{routeActive('cart')}}">Cart</a></li>
                             <li><a href="{{ route('list-wish') }}" class="{{routeActive('list-wish')}}">Wishlist</a></li>
                             <li><a href="{{ route('checkout') }}" class="{{routeActive('checkout')}}">Checkout</a></li>
                             <li><a href="{{ route('pricingxx') }}" class="{{routeActive('pricing')}}">Pricing</a></li>

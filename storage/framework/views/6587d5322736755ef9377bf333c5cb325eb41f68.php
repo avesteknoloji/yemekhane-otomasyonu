@@ -14,8 +14,8 @@
           <!-- Bookmark Start-->
           <div class="bookmark">
             <ul>
-              <li><a href="javascript:void(0)" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-original-title="Tables"><i data-feather="inbox"></i></a></li>
-              <li><a href="javascript:void(0)" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-original-title="Chat"><i data-feather="message-square"></i></a></li>
+              <li><a href="<?php echo e(route('sepet')); ?>" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-original-title="Sepet"><i data-feather="shopping-cart"></i><span class="badge rounded-pill badge-danger"><?php echo e(Cart::count()); ?></span></a></li>
+              <li><a href="javascript:void(0)" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-original-title="Tables"><i data-feather="inbox"></i></a></li>              
               <li><a href="javascript:void(0)" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-original-title="Icons"><i data-feather="command"></i></a></li>
               <li><a href="javascript:void(0)" data-container="body" data-bs-toggle="popover" data-placement="top" title="" data-original-title="Learning"><i data-feather="layers"></i></a></li>
               <li>

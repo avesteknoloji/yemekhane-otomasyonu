@@ -1,6 +1,6 @@
 
 
-<?php $__env->startSection('title'); ?>Cart
+<?php $__env->startSection('title'); ?>Sepet
  <?php echo e($title); ?>
 
 <?php $__env->stopSection(); ?>
@@ -11,11 +11,10 @@
 <?php $__env->startSection('content'); ?>
 	<?php $__env->startComponent('components.breadcrumb'); ?>
 		<?php $__env->slot('breadcrumb_title'); ?>
-			<h3>Cart</h3>
+			<h3>Sepet</h3>
 		<?php $__env->endSlot(); ?>
-		<li class="breadcrumb-item">Pages</li>
-		<li class="breadcrumb-item">Ecommerce</li>
-		<li class="breadcrumb-item active">Cart</li>
+		<li class="breadcrumb-item">Siparişler</li>
+		<li class="breadcrumb-item active">Sepet</li>
 	<?php echo $__env->renderComponent(); ?>
 	
 	<div class="container-fluid">
@@ -23,92 +22,75 @@
 	        <div class="col-sm-12">
 	            <div class="card">
 	                <div class="card-header pb-0">
-	                    <h5>Cart</h5>
+	                    <h5>Sipariş Oluştur</h5>
 	                </div>
 	                <div class="card-body">
 	                    <div class="row">
 	                        <div class="order-history table-responsive wishlist">
-	                            <table class="table table-bordered">
-	                                <thead>
-	                                    <tr>
-	                                        <th>Prdouct</th>
-	                                        <th>Prdouct Name</th>
-	                                        <th>Price</th>
-	                                        <th>Quantity</th>
-	                                        <th>Action</th>
-	                                        <th>Total</th>
-	                                    </tr>
-	                                </thead>
-	                                <tbody>
-	                                    <tr>
-	                                        <td><img class="img-fluid img-40" src="<?php echo e(asset('assets/images/product/1.png')); ?>" alt="#" /></td>
-	                                        <td>
-	                                            <div class="product-name">
-	                                                <a href="#"> <h6>Long Top</h6></a>
-	                                            </div>
-	                                        </td>
-	                                        <td>$21</td>
-	                                        <td>
-	                                            <fieldset class="qty-box">
-	                                                <div class="input-group">
-	                                                    <input class="touchspin text-center" type="text" value="5" />
-	                                                </div>
-	                                            </fieldset>
-	                                        </td>
-	                                        <td><i data-feather="x-circle"></i></td>
-	                                        <td>$12456</td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td><img class="img-fluid img-40" src="<?php echo e(asset('assets/images/product/13.png')); ?>" alt="#" /></td>
-	                                        <td>
-	                                            <div class="product-name">
-	                                                <a href="#"> <h6>Fancy watch</h6></a>
-	                                            </div>
-	                                        </td>
-	                                        <td>$50</td>
-	                                        <td>
-	                                            <fieldset class="qty-box">
-	                                                <div class="input-group">
-	                                                    <input class="touchspin text-center" type="text" value="5" />
-	                                                </div>
-	                                            </fieldset>
-	                                        </td>
-	                                        <td><i data-feather="x-circle"></i></td>
-	                                        <td>$12456</td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td><img class="img-fluid img-40" src="<?php echo e(asset('assets/images/product/4.png')); ?>" alt="#" /></td>
-	                                        <td>
-	                                            <div class="product-name">
-	                                                <a href="#"> <h6>Man shoes</h6></a>
-	                                            </div>
-	                                        </td>
-	                                        <td>$11</td>
-	                                        <td>
-	                                            <fieldset class="qty-box">
-	                                                <div class="input-group">
-	                                                    <input class="touchspin text-center" type="text" value="5" />
-	                                                </div>
-	                                            </fieldset>
-	                                        </td>
-	                                        <td><i data-feather="x-circle"></i></td>
-	                                        <td>$12456</td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td colspan="4">
-	                                            <div class="input-group"><input class="form-control me-2" type="text" placeholder="Enter coupan code" /><a class="btn btn-primary" href="#">Apply</a></div>
-	                                        </td>
-	                                        <td class="total-amount">
-	                                            <h6 class="m-0 text-end"><span class="f-w-600">Total Price :</span></h6>
-	                                        </td>
-	                                        <td><span>$6935.00 </span></td>
-	                                    </tr>
-	                                    <tr>
-	                                        <td class="text-end" colspan="5"><a class="btn btn-secondary cart-btn-transform" href="#">continue shopping</a></td>
-	                                        <td><a class="btn btn-success cart-btn-transform" href="#">check out</a></td>
-	                                    </tr>
-	                                </tbody>
-	                            </table>
+								<?php if(count(Cart::content())>0): ?>
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>Resim</th>
+												<th>Yemek Adı</th>
+												<th>Ücreti</th>
+												<th>Miktarı</th>
+												<th></th>
+												<th>Toplam</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php $__currentLoopData = Cart::content(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+											<tr>
+												<td><img class="img-fluid img-40" src="<?php echo e(asset('uploads/images/yemek_resimleri/'.$item->options->yemek_resmi)); ?>" alt="" /></td>
+												<td>
+													<div class="product-name">
+														<a href="#"> <h6><?php echo e($item->name); ?></h6></a>
+													</div>
+												</td>
+												<td><?php echo e($item->price); ?>  ₺</td>
+												<td>
+													<fieldset class="qty-box">
+														<div class="input-group">
+															<input class="touchspin text-center" type="text" value="<?php echo e($item->qty); ?>" />
+														</div>
+													</fieldset>
+												</td>
+												<td>
+													<form action="<?php echo e(route('sepettenKaldir', $item->rowId)); ?>" method="POST">
+														<?php echo e(csrf_field()); ?>
+
+														<?php echo e(method_field('DELETE')); ?> 
+														<button type="submit" class="btn btn-sm btn-danger">
+                                        				<span class="fa fa-trash"></span>
+                                        				</button>
+													</form>
+													
+												</td>
+												<td><?php echo e($item->subtotal); ?>  ₺</td>
+											</tr>
+											<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+											<tr>
+												<td colspan="4">
+													
+												</td>
+												<td class="total-amount">
+													<h6 class="m-0 text-end"><span class="f-w-600">Toplam:</span></h6>
+												</td>
+												<td><span><?php echo e(Cart::subtotal()); ?>  ₺</span></td>
+											</tr>
+											<tr>
+												<td class="text-end" colspan="5"><a class="btn btn-secondary cart-btn-transform" href="#">Siparişine Ekleme Yap</a></td>
+												<td><a class="btn btn-success cart-btn-transform" href="#">Ödemeye Geç</a></td>
+											</tr>
+										</tbody>
+									</table>
+								<?php else: ?>
+								
+								<div class="alert alert-success">Sepetinizde Ürün Yok</div>
+							
+								<?php endif; ?>
+	                            
 	                        </div>
 	                    </div>
 	                </div>

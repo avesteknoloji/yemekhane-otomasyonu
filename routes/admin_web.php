@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\yemekController;
 use App\Http\Controllers\admin\kategoriController;
 use App\Http\Controllers\admin\adminYemekController;
-
+use App\Http\Controllers\admin\siparisController;
 
 Route::prefix('admin')->group(function () {
 });
@@ -187,7 +187,7 @@ Route::prefix('ecommerce')->group( function(){
 	Route::view('payment-details', 'admin.apps.ecommerce.payment-details')->name('payment-details');
 	Route::view('order-history', 'admin.apps.ecommerce.order-history')->name('order-history');
 	Route::view('invoice-template', 'admin.apps.ecommerce.invoice-template')->name('invoice-template');
-	Route::view('cart', 'admin.apps.ecommerce.cart')->name('cart');
+	//Route::view('cart', 'admin.apps.ecommerce.cart')->name('cart');
 	Route::view('list-wish', 'admin.apps.ecommerce.list-wish')->name('list-wish');
 	Route::view('checkout', 'admin.apps.ecommerce.checkout')->name('checkout');
 	Route::view('pricingxx', 'admin.apps.ecommerce.pricing-view')->name('pricingxx');
@@ -205,7 +205,15 @@ Route::group(['prefix' => 'Yonetim'], function () {
 	Route::get('yemek-duzenle/{id}',[adminYemekController::class,'form'])->name('yemekDuzenle');
 	Route::post('yemek-kaydet/{id?}',[adminYemekController::class,'kaydet'])->name('yemekKaydet');
 	Route::delete('yemek-sil/{id}',[adminYemekController::class,'sil'])->name('yemekSil');
+	
+	
 
+});
+
+Route::group(['prefix'=>'sepet'],function(){
+	Route::get('/', [siparisController::class,'index'])->name('sepet');
+	Route::get('ekle',[siparisController::class,'ekle'])->name('sepeteEkle');
+	Route::delete('kaldir/{id}',[siparisController::class,'kaldir'])->name('sepettenKaldir');
 });
 
 Route::prefix('email')->group( function(){

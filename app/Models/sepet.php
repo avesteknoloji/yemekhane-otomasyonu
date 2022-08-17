@@ -13,6 +13,8 @@ class sepet extends Model
     protected $table="sepet";
     protected $guarded=[];
 
+  
+
     public function siparis(){
         return $this->hasone(siparis::class);
     }

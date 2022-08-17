@@ -54,7 +54,7 @@
                             <li><a href="<?php echo e(route('payment-details')); ?>" class="<?php echo e(routeActive('payment-details')); ?>">Payment Details</a></li>
                             <li><a href="<?php echo e(route('order-history')); ?>" class="<?php echo e(routeActive('order-history')); ?>">Order History</a></li>
                             <li><a href="<?php echo e(route('invoice-template')); ?>" class="<?php echo e(routeActive('invoice-template')); ?>">Invoice</a></li>
-                            <li><a href="<?php echo e(route('cart')); ?>" class="<?php echo e(routeActive('cart')); ?>">Cart</a></li>
+                            <li><a href="#' class="<?php echo e(routeActive('cart')); ?>">Cart</a></li>
                             <li><a href="<?php echo e(route('list-wish')); ?>" class="<?php echo e(routeActive('list-wish')); ?>">Wishlist</a></li>
                             <li><a href="<?php echo e(route('checkout')); ?>" class="<?php echo e(routeActive('checkout')); ?>">Checkout</a></li>
                             <li><a href="<?php echo e(route('pricingxx')); ?>" class="<?php echo e(routeActive('pricing')); ?>">Pricing</a></li>
