@@ -51,8 +51,8 @@
 												<td><?php echo e($item->price); ?>  ₺</td>
 												<td>
 													<fieldset class="qty-box">
-														<div class="input-group">
-															<input class="touchspin text-center" type="text" value="<?php echo e($item->qty); ?>" />
+														<div class="input-group" data-id="<?php echo e($item->rowId); ?>">
+															<input class="touchspin text-center" id="rowname<?php echo e($item->rowId); ?>" type="text" value="<?php echo e($item->qty); ?>" />
 														</div>
 													</fieldset>
 												</td>
@@ -80,7 +80,14 @@
 												<td><span><?php echo e(Cart::subtotal()); ?>  ₺</span></td>
 											</tr>
 											<tr>
-												<td class="text-end" colspan="5"><a class="btn btn-secondary cart-btn-transform" href="#">Siparişine Ekleme Yap</a></td>
+												
+												<td class="text-end" colspan="4">
+													<form action="<?php echo e(route('sepetGuncelle')); ?>" method="POST">
+														<?php echo e(csrf_field()); ?>	
+														<button class="btn btn-secondary cart-btn-transform">Siparişi Güncelle</button>
+													</form>
+												</td>
+												<td class="text-end"><a class="btn btn-secondary cart-btn-transform" href="#">Siparişe Devam Et</a></td>
 												<td><a class="btn btn-success cart-btn-transform" href="#">Ödemeye Geç</a></td>
 											</tr>
 										</tbody>
@@ -104,6 +111,33 @@
     <script src="<?php echo e(asset('assets/js/touchspin/touchspin.js')); ?>"></script>
     <script src="<?php echo e(asset('assets/js/touchspin/input-groups.min.js')); ?>"></script>
 	<?php $__env->stopPush(); ?>
+
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.input-group').click(function(){
+				id = $(this).attr('data-id');
+				qty = $('#rowname'+id).val();
+				$.ajax({
+					url:"<?php echo e(route('sepetGuncelle')); ?>",
+					headers:{'X-CSRF-TOKEN':'<?php echo e(csrf_token()); ?>'},
+					method:"GET",
+					data:{yemekQty:qty, rowId:id},
+					success:function(result){
+						//alert("Sepete Eklendi")
+					}
+
+
+				});
+				
+			});
+			
+		}); 
+	</script>
+	
 
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.admin.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH X:\Yemekhane projesi\Yemekhane\yemekhane-otomasyonu\resources\views/admin/apps/ecommerce/cart.blade.php ENDPATH**/ ?>

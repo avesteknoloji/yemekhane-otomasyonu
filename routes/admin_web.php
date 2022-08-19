@@ -214,6 +214,7 @@ Route::group(['prefix'=>'sepet'],function(){
 	Route::get('/', [siparisController::class,'index'])->name('sepet');
 	Route::get('ekle',[siparisController::class,'ekle'])->name('sepeteEkle');
 	Route::delete('kaldir/{id}',[siparisController::class,'kaldir'])->name('sepettenKaldir');
+	Route::get('guncelle',[siparisController::class,'guncelle'])->name('sepetGuncelle');
 });
 
 Route::prefix('email')->group( function(){

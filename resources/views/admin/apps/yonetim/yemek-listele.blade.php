@@ -87,10 +87,10 @@
                                     <form action="{{route('yemekSil', $item->id)}}" method="POST">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }} 
-                                    <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
+                                        <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
                                         <span class="fa fa-trash"></span>
-                                    </button>
-                                </form>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>    
                             @endforeach

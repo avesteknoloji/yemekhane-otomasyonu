@@ -1,10 +1,10 @@
 document.getElementById('filter_product_id').addEventListener("change",function(){
   
   //dropdownlistden seçilen değerin id'si yemek kategori id değişkeni ile tutuyoruz
-  let yemekKategoriId= this.value || this.options[this.selectedIndex].value
+  let yemekKategoriId= this.value || this.options[this.selectedIndex].value;
   //adres çubuğunda link düzenlemesi yapılıyor. filtering company videosu
-    window.location.href=window.location.href.split('?')[0]+'?yemekKategoriId='+yemekKategoriId
-})
+    window.location.href=window.location.href.split('?')[0]+'?yemekKategoriId='+yemekKategoriId;
+});
 
 
 

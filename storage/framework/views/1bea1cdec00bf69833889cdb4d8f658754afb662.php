@@ -90,10 +90,10 @@
                                         <?php echo e(csrf_field()); ?>
 
                                         <?php echo e(method_field('DELETE')); ?> 
-                                    <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
+                                        <button type="submit" class="btn btn-sm btn-danger"  onclick="return confirm('Emin misiniz?')">
                                         <span class="fa fa-trash"></span>
-                                    </button>
-                                </form>
+                                        </button>
+                                    </form>
                                 </td>
                             </tr>    
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

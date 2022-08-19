@@ -29,9 +29,25 @@ class siparisController extends Controller
         
     }
 
-    public function kaldir($id)
-    {   
-        Cart::remove($id);
+    public function kaldir($rowid){   
+        Cart::remove($rowid);
         return redirect()->route('sepet');
+    }
+
+    public function guncelle(){
+             
+        $qty=$_GET['yemekQty'];
+        $rowid=$_GET['rowId'];
+       // echo $qty;
+      /*   foreach (Cart::content() as $item) {
+            echo $item->rowId."->".$item->qty."<br>";
+            
+           
+        } */
+
+        Cart::update($rowid, $qty);
+        //return redirect()->route('sepet');
+
+
     }
 }
