@@ -90,7 +90,7 @@
 						<div class="card">
 							<div class="card-header">
 								<div class="input-group">
-									<input class="datepicker-here form-control digits" type="text" placeholder="Tarih seçin" data-language="en" />
+									<input class="datepicker-here form-control digits" id="date" type="text" placeholder="Tarih seçin" data-language="en" />
 								</div>
 							</div>
 						</div>
@@ -188,11 +188,12 @@
 		$(document).ready(function(){
 			$('.cartLink').click(function(){
 				id=this.id;
+				tarih=$('#date').val();
 				$.ajax({
 					url:"{{route('sepeteEkle')}}",
 					headers:{'X-CSRF-TOKEN':'{{csrf_token()}}'},
 					method:"GET",
-					data:{yemekID:id},
+					data:{yemekID:id, siparisTarihi:tarih},
 					success:function(result){
 						alert("Sepete Eklendi")
 					}

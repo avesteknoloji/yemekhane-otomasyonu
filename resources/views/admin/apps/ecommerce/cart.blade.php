@@ -30,6 +30,7 @@
 									<table class="table table-bordered">
 										<thead>
 											<tr>
+												<th>Sipariş Tarihi</th>
 												<th>Resim</th>
 												<th>Yemek Adı</th>
 												<th>Ücreti</th>
@@ -41,6 +42,7 @@
 										<tbody>
 											@foreach (Cart::content() as $item)
 											<tr>
+												<td>{{$item->options->siparis_tarihi}}</td>
 												<td><img class="img-fluid img-40" src="{{asset('uploads/images/yemek_resimleri/'.$item->options->yemek_resmi)}}" alt="" /></td>
 												<td>
 													<div class="product-name">

@@ -19,11 +19,14 @@ class siparisController extends Controller
     public function ekle(){
        
         $id= $_GET['yemekID'];
+        $tarih=$_GET['siparisTarihi'];
         $yemek=yemek::find($id);
-        //echo "sdsdfsdf";
-        //echo $yemek->yemek_resmi;
-        //Cart::add($id, $yemek->yemek_ad, 1, $yemek->yemek_fiyat);
-        Cart::add(['id' => $id, 'name' => $yemek->yemek_ad, 'qty' => 1, 'price' => $yemek->yemek_fiyat, 'weight' => 0, 'options' => ['yemek_resmi' => $yemek->yemek_resmi]]);
+        Cart::add([
+            'id' => $id, 
+            'name' => $yemek->yemek_ad, 
+            'qty' => 1, 'price' => $yemek->yemek_fiyat, 
+            'weight' => 0, 
+            'options' => ['yemek_resmi' => $yemek->yemek_resmi, 'siparis_tarihi'=>$tarih]]);
 
         //return view('admin.apps.ecommerce.cart',compact('yemek'));
         

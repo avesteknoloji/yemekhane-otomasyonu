@@ -31,6 +31,7 @@
 									<table class="table table-bordered">
 										<thead>
 											<tr>
+												<th>Sipariş Tarihi</th>
 												<th>Resim</th>
 												<th>Yemek Adı</th>
 												<th>Ücreti</th>
@@ -42,6 +43,7 @@
 										<tbody>
 											<?php $__currentLoopData = Cart::content(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 											<tr>
+												<td><?php echo e($item->options->siparis_tarihi); ?></td>
 												<td><img class="img-fluid img-40" src="<?php echo e(asset('uploads/images/yemek_resimleri/'.$item->options->yemek_resmi)); ?>" alt="" /></td>
 												<td>
 													<div class="product-name">
