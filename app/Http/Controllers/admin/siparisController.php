@@ -49,7 +49,17 @@ class siparisController extends Controller
         } */
 
         Cart::update($rowid, $qty);
-        //return redirect()->route('sepet');
+        foreach (Cart::content() as $item) {
+            if ($rowid==$item->rowId) {$subtotal=$item->subtotal;}
+            
+            
+           
+        } 
+        
+        return response()->json([
+            'qty'=>''.$subtotal.'',
+            'total'=>''.Cart::subtotal().''
+        ]);
 
 
     }

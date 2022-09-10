@@ -28,7 +28,7 @@
 	                    <div class="row">
 	                        <div class="order-history table-responsive wishlist">
 								<?php if(count(Cart::content())>0): ?>
-									<table class="table table-bordered">
+									<table class="table table-bordered cartpage">
 										<thead>
 											<tr>
 												<th>Sipariş Tarihi</th>
@@ -42,7 +42,7 @@
 										</thead>
 										<tbody>
 											<?php $__currentLoopData = Cart::content(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-											<tr>
+											<tr class="cartitem">
 												<td><?php echo e($item->options->siparis_tarihi); ?></td>
 												<td><img class="img-fluid img-40" src="<?php echo e(asset('uploads/images/yemek_resimleri/'.$item->options->yemek_resmi)); ?>" alt="" /></td>
 												<td>
@@ -69,7 +69,7 @@
 													</form>
 													
 												</td>
-												<td><?php echo e($item->subtotal); ?>  ₺</td>
+												<td class="row-subtotal"><?php echo e($item->subtotal); ?>  ₺</td>
 											</tr>
 											<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 											<tr>
@@ -79,12 +79,12 @@
 												<td class="total-amount">
 													<h6 class="m-0 text-end"><span class="f-w-600">Toplam:</span></h6>
 												</td>
-												<td><span><?php echo e(Cart::subtotal()); ?>  ₺</span></td>
+												<td class="subtotal"><span><?php echo e(Cart::subtotal()); ?>  ₺</span></td>
 											</tr>
 											<tr>
 												
 												<td class="text-end" colspan="4">
-													<form action="<?php echo e(route('sepetGuncelle')); ?>" method="POST">
+													<form action="<?=$_SERVER['PHP_SELF'];?>">
 														<?php echo e(csrf_field()); ?>	
 														<button class="btn btn-secondary cart-btn-transform">Siparişi Güncelle</button>
 													</form>
@@ -123,12 +123,16 @@
 			$('.input-group').click(function(){
 				id = $(this).attr('data-id');
 				qty = $('#rowname'+id).val();
+				var thisClick=$(this);
 				$.ajax({
 					url:"<?php echo e(route('sepetGuncelle')); ?>",
 					headers:{'X-CSRF-TOKEN':'<?php echo e(csrf_token()); ?>'},
 					method:"GET",
 					data:{yemekQty:qty, rowId:id},
-					success:function(result){
+					success:function(response){
+						thisClick.closest(".cartitem").find('.row-subtotal').text(response.qty+" ₺")
+						thisClick.closest(".cartpage").find('.subtotal').text(response.total+" ₺")
+						console.log(response.total);
 						//alert("Sepete Eklendi")
 					}
 

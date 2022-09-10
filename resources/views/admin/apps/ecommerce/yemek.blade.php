@@ -178,6 +178,8 @@
 	<script src="{{ asset('assets/js/datepicker/date-picker/datepicker.js') }}"></script>
     <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.tr.js') }}"></script>
     <script src="{{ asset('assets/js/datepicker/date-picker/datepicker.custom.js') }}"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="sweetalert2.all.min.js"></script>
 	@endpush
 
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
@@ -195,7 +197,14 @@
 					method:"GET",
 					data:{yemekID:id, siparisTarihi:tarih},
 					success:function(result){
-						alert("Sepete Eklendi")
+						Swal.fire({
+							position: 'top-end',
+							icon: 'success',
+							title: 'Sepete Eklendi',
+							showConfirmButton: false,
+							timer: 2000
+							}
+						)
 					}
 				});
 
